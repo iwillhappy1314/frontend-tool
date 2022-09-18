@@ -23,6 +23,9 @@ module.exports = {
         '../page.php',
         '../single.php',
         '../comments.php',
+        '../archive-project.php',
+        '../archive-product.php',
+        '../single-product.php',
         '../404.php',
     ],
     safelist: purgecssWhiteList.whitelist.concat([

@@ -18,7 +18,6 @@ if ($('.rs-popup-video').length > 0) {
     });
 }
 
-
 $('.rs-popup-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -32,7 +31,7 @@ $('.rs-popup-gallery').magnificPopup({
     image: {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
         titleSrc: function(item) {
-            return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            return item.el.attr('title');
         }
     }
 });

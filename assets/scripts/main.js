@@ -10,13 +10,18 @@ const toolTipEL = $('[data-tippy-content]');
 const youtubeEl = document.querySelectorAll('.rs-lazyYT');
 const navTreeEl = $('.widget_nav_menu, .widget_product_categories, .widget-nav_menu');
 const sidebarEL = $('.rs-sticky-left, .rs-sticky-right');
-const popupEL = $('.rs-popup');
+const popupEL = $('.rs-popup-image,.rs-popup-gallery,.rs-popup-video');
 const isotopeEL = $('.rs-isotope__filter');
 const meanMenuEL = $('.rs-mean-menu');
 const accordionEL = $('.rs-accordion-container');
 const swiperEL = $('.rs-swiper-container');
 const wowEL = $('.wow');
 const scrollSpyEL = $('.rs-scroll-nav');
+const splideEL = document.querySelectorAll('.splide');
+
+console.log(popupEL);
+
+console.log(splideEL.length);
 
 if (dropdownEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
@@ -72,6 +77,10 @@ if (wowEL.length > 0) {
 
 if (scrollSpyEL.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/scrollspy.js'], 'scrollspy');
+}
+
+if (splideEL.length > 0) {
+    loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
 }
 
 footerNav();

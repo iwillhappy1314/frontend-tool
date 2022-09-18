@@ -2456,7 +2456,7 @@ $('.rs-popup-gallery').magnificPopup({
   image: {
     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
     titleSrc: function titleSrc(item) {
-      return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+      return item.el.attr('title');
     }
   }
 });

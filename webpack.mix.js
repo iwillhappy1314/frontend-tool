@@ -54,6 +54,7 @@ mix.js('assets/scripts/modules/bootstrap.js', 'static/js').
     js('assets/scripts/modules/meanmenu/meanmenu.js', 'static/js').
     js('assets/scripts/modules/swiper/swiper.js', 'static/js').
     js('assets/scripts/modules/wow/wow.js', 'static/js').
+    js('assets/scripts/modules/splide.js', 'static/js').
     js('assets/scripts/modules/isotope.js', 'static/js');
 
 mix.copyWatched('assets/images', 'dist/images').

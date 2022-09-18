@@ -47,13 +47,16 @@ var toolTipEL = $('[data-tippy-content]');
 var youtubeEl = document.querySelectorAll('.rs-lazyYT');
 var navTreeEl = $('.widget_nav_menu, .widget_product_categories, .widget-nav_menu');
 var sidebarEL = $('.rs-sticky-left, .rs-sticky-right');
-var popupEL = $('.rs-popup');
+var popupEL = $('.rs-popup-image,.rs-popup-gallery,.rs-popup-video');
 var isotopeEL = $('.rs-isotope__filter');
 var meanMenuEL = $('.rs-mean-menu');
 var accordionEL = $('.rs-accordion-container');
 var swiperEL = $('.rs-swiper-container');
 var wowEL = $('.wow');
 var scrollSpyEL = $('.rs-scroll-nav');
+var splideEL = document.querySelectorAll('.splide');
+console.log(popupEL);
+console.log(splideEL.length);
 
 if (dropdownEl.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
@@ -109,6 +112,10 @@ if (wowEL.length > 0) {
 
 if (scrollSpyEL.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/scrollspy.js'], 'scrollspy');
+}
+
+if (splideEL.length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
 }
 
 (0,_components_footer__WEBPACK_IMPORTED_MODULE_0__["default"])();

@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@popperjs/core': ^2.11.5
+  '@splidejs/splide': ^4.0.17
   '@tailwindcss/aspect-ratio': ^0.4.0
   '@tailwindcss/forms': ^0.5.2
   '@tailwindcss/line-clamp': ^0.3.1
@@ -44,6 +45,7 @@ specifiers:
 
 dependencies:
   '@popperjs/core': 2.11.6
+  '@splidejs/splide': 4.0.17
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.7
   accordion-js: 3.3.2
   bootstrap: 5.2.0_@popperjs+core@2.11.6
@@ -1839,6 +1841,10 @@ packages:
   /@socket.io/component-emitter/3.1.0:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
     dev: true
+
+  /@splidejs/splide/4.0.17:
+    resolution: {integrity: sha512-k67vDY0+hl7Qi+I+juOF+DO1KuRw+4RfV5x5SlIVrK60DmMzQvp2j9CqDzixUw3jDDoEaPTGY4BKy5SZSiFf1Q==}
+    dev: false
 
   /@tailwindcss/aspect-ratio/0.4.0_tailwindcss@3.1.7:
     resolution: {integrity: sha512-WJu0I4PpqNPuutpaA9zDUq2JXR+lorZ7PbLcKNLmb6GL9/HLfC7w3CRsMhJF4BbYd/lkY6CfXOvkYpuGnZfkpQ==}
