@@ -4282,6 +4282,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/js/splide.esm.js");
 
 
+/**
+ * Thumbnail slider
+ * @type {Splide}
+ */
+
 var splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"]('#main-carousel', {
   pagination: false
 });

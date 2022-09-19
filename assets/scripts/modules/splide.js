@@ -1,6 +1,10 @@
 import '@splidejs/splide/css';
 import Splide from '@splidejs/splide';
 
+/**
+ * Thumbnail slider
+ * @type {Splide}
+ */
 var splide = new Splide('#main-carousel', {
     pagination: false,
 });

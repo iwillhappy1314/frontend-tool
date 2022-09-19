@@ -42,28 +42,28 @@
     @extend .container !optional;
 }
 
-.dropdown-nav-special-toggle{
-    @screen lg{
-      display: none;
+.dropdown-nav-special-toggle {
+    @screen lg {
+        display: none;
     }
 }
 
 
-.item-is-fixed{
+.item-is-fixed {
     top: 0;
 }
 
-.site__banner{
+.site__banner {
     min-height: 200px;
 }
 
-@screen lg{
-  .f-mean-nav{
-      @apply hidden;
-  }
+@screen lg {
+    .f-mean-nav {
+        @apply hidden;
+    }
 }
 
-.splide__slide{
+.splide__slide {
     max-width: 100%;
 }
 

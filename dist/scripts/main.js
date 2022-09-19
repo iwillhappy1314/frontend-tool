@@ -55,8 +55,6 @@ var swiperEL = $('.rs-swiper-container');
 var wowEL = $('.wow');
 var scrollSpyEL = $('.rs-scroll-nav');
 var splideEL = document.querySelectorAll('.splide');
-console.log(popupEL);
-console.log(splideEL.length);
 
 if (dropdownEl.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');

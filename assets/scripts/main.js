@@ -19,10 +19,6 @@ const wowEL = $('.wow');
 const scrollSpyEL = $('.rs-scroll-nav');
 const splideEL = document.querySelectorAll('.splide');
 
-console.log(popupEL);
-
-console.log(splideEL.length);
-
 if (dropdownEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
 }
