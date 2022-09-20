@@ -2,6 +2,8 @@
 
 var loadjs = require('loadjs');
 
+console.log(wenpriseSettings);
+
 import footerNav from './components/footer';
 
 const dropdownEl = document.querySelectorAll('.rs-dropdown-toggle');
@@ -18,7 +20,6 @@ const swiperEL = $('.rs-swiper');
 const wowEL = $('.wow');
 const scrollSpyEL = $('.rs-scroll-nav');
 const splideEL = document.querySelectorAll('.splide');
-
 
 if (dropdownEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
@@ -65,7 +66,7 @@ if (meanMenuEL.length > 0) {
 }
 
 if (swiperEL.length > 0) {
-    loadjs([wenpriseSettings.staticPath + 'js/swiper.js'], 'swiper');
+    loadjs([wenpriseSettings.staticPath + 'css/swiper.css', wenpriseSettings.staticPath + 'js/swiper.js'], 'swiper');
 }
 
 if (wowEL.length > 0) {

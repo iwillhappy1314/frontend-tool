@@ -1,4 +1,5 @@
-(self["webpackChunkwenprise_frontend_tool"] = self["webpackChunkwenprise_frontend_tool"] || []).push([["/static/js/swiper"],{
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./assets/scripts/modules/swiper/ini-photoswipe.js":
 /*!*********************************************************!*\
@@ -108,123 +109,6 @@ var initPhotoSwipeWithSwiper = function initPhotoSwipeWithSwiper(gallerySelector
 };
 
 
-
-/***/ }),
-
-/***/ "./assets/scripts/modules/swiper/swiper.js":
-/*!*************************************************!*\
-  !*** ./assets/scripts/modules/swiper/swiper.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/.pnpm/swiper@8.3.2/node_modules/swiper/swiper.esm.js");
-/* harmony import */ var _ini_photoswipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ini-photoswipe */ "./assets/scripts/modules/swiper/ini-photoswipe.js");
-/* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ "jquery");
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-
-
-jQuery(document).ready(function ($) {
-  /**
-   * Slider with animated caption
-   * @type {Swiper}
-   */
-  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-swiper-container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true
-    },
-    paginationClickable: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    spaceBetween: 0,
-    loop: true,
-    simulateTouch: true,
-    autoplay: 5000,
-    speed: 500
-  });
-  swiper.on('slideChangeTransitionStart', function () {
-    $('.rs-swiper-container').find('.slider-wrapper').hide();
-  });
-  swiper.on('slideChangeTransitionEnd', function () {
-    $('.rs-swiper-container').find('.slider-wrapper').show();
-  });
-  /**
-   * 绑定两个Swiper实例
-   * @param swiperList
-   */
-
-  function bindSwipers() {
-    for (var _len = arguments.length, swiperList = new Array(_len), _key = 0; _key < _len; _key++) {
-      swiperList[_key] = arguments[_key];
-    }
-
-    for (var _i = 0, _swiperList = swiperList; _i < _swiperList.length; _i++) {
-      var _swiper = _swiperList[_i];
-
-      _swiper.slideTo = function (index, speed, runCallbacks, doNotPropagate) {
-        if (doNotPropagate) {
-          swiper__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.slideTo.apply(this, arguments);
-        } else {
-          var _iterator = _createForOfIteratorHelper(swiperList),
-              _step;
-
-          try {
-            for (_iterator.s(); !(_step = _iterator.n()).done;) {
-              var _swiper2 = _step.value;
-
-              _swiper2.slideTo(index, speed, runCallbacks, true);
-            }
-          } catch (err) {
-            _iterator.e(err);
-          } finally {
-            _iterator.f();
-          }
-        }
-      };
-    }
-  }
-  /**
-   * Product gallery with PhotoSwipe
-   * @type {Swiper}
-   */
-
-
-  var galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-gallery-top', {
-    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller],
-    slidesPerView: 1,
-    loop: true,
-    loopedSlides: 50,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  });
-  var galleryThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-gallery-thumbs', {
-    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller],
-    slidesPerView: 4,
-    slideToClickedSlide: true,
-    spaceBetween: 10,
-    loopedSlides: 50,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  });
-  bindSwipers(galleryTop, galleryThumbs);
-  (0,_ini_photoswipe__WEBPACK_IMPORTED_MODULE_1__.initPhotoSwipeWithSwiper)('.rs-gallery-top', galleryTop);
-});
 
 /***/ }),
 
@@ -18436,10 +18320,195 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ })
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./assets/scripts/modules/swiper/swiper.js"));
-/******/ }
-]);
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!*************************************************!*\
+  !*** ./assets/scripts/modules/swiper/swiper.js ***!
+  \*************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/.pnpm/swiper@8.3.2/node_modules/swiper/swiper.esm.js");
+/* harmony import */ var _ini_photoswipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ini-photoswipe */ "./assets/scripts/modules/swiper/ini-photoswipe.js");
+/* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ "jquery");
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+jQuery(document).ready(function ($) {
+  /**
+   * Slider with animated caption
+   * @type {Swiper}
+   */
+  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true
+    },
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    spaceBetween: 0,
+    loop: true,
+    simulateTouch: true,
+    autoplay: 5000,
+    speed: 500
+  });
+  swiper.on('slideChangeTransitionStart', function () {
+    $('.rs-swiper-container').find('.slider-wrapper').hide();
+  });
+  swiper.on('slideChangeTransitionEnd', function () {
+    $('.rs-swiper-container').find('.slider-wrapper').show();
+  });
+  /**
+   * 绑定两个Swiper实例
+   * @param swiperList
+   */
+
+  function bindSwipers() {
+    for (var _len = arguments.length, swiperList = new Array(_len), _key = 0; _key < _len; _key++) {
+      swiperList[_key] = arguments[_key];
+    }
+
+    for (var _i = 0, _swiperList = swiperList; _i < _swiperList.length; _i++) {
+      var _swiper = _swiperList[_i];
+
+      _swiper.slideTo = function (index, speed, runCallbacks, doNotPropagate) {
+        if (doNotPropagate) {
+          swiper__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.slideTo.apply(this, arguments);
+        } else {
+          var _iterator = _createForOfIteratorHelper(swiperList),
+              _step;
+
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var _swiper2 = _step.value;
+
+              _swiper2.slideTo(index, speed, runCallbacks, true);
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+        }
+      };
+    }
+  }
+  /**
+   * Product gallery with PhotoSwipe
+   * @type {Swiper}
+   */
+
+
+  var galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-gallery-top', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller],
+    slidesPerView: 1,
+    loop: true,
+    loopedSlides: 50,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+  var galleryThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-gallery-thumbs', {
+    modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller],
+    slidesPerView: 4,
+    slideToClickedSlide: true,
+    spaceBetween: 10,
+    loopedSlides: 50,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+  bindSwipers(galleryTop, galleryThumbs);
+  (0,_ini_photoswipe__WEBPACK_IMPORTED_MODULE_1__.initPhotoSwipeWithSwiper)('.rs-gallery-top', galleryTop);
+});
+})();
+
+/******/ })()
+;
 //# sourceMappingURL=swiper.js.map

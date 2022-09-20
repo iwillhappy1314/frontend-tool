@@ -1,12 +1,9 @@
-"use strict";
-(self["webpackChunkwenprise_frontend_tool"] = self["webpackChunkwenprise_frontend_tool"] || []).push([["/static/js/popover"],{
-
-/***/ "./assets/scripts/modules/popover.js":
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+var __webpack_exports__ = {};
 /*!*******************************************!*\
   !*** ./assets/scripts/modules/popover.js ***!
   \*******************************************/
-/***/ (() => {
-
 
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -26,13 +23,6 @@ var popoverElementList = document.querySelectorAll('.rs-popover');
 _toConsumableArray(popoverElementList).map(function (popoverEl) {
   new Popover(popoverEl);
 });
-
-/***/ })
-
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./assets/scripts/modules/popover.js"));
-/******/ }
-]);
+/******/ })()
+;
 //# sourceMappingURL=popover.js.map

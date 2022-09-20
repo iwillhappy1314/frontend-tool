@@ -1,5 +1,6 @@
-"use strict";
-(self["webpackChunkwenprise_frontend_tool"] = self["webpackChunkwenprise_frontend_tool"] || []).push([["/static/js/splide"],{
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/js/splide.esm.js":
 /*!********************************************************************************************************!*\
@@ -3744,49 +3745,6 @@ var SplideRenderer = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./assets/scripts/modules/splide.js":
-/*!******************************************!*\
-  !*** ./assets/scripts/modules/splide.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _splidejs_splide_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide/css */ "./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/css/splide.min.css");
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/js/splide.esm.js");
-
-
-var splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"]('#main-carousel', {
-  pagination: false
-});
-var thumbnails = document.getElementsByClassName('thumbnail');
-var current;
-
-for (var i = 0; i < thumbnails.length; i++) {
-  initThumbnail(thumbnails[i], i);
-}
-
-function initThumbnail(thumbnail, index) {
-  thumbnail.addEventListener('click', function () {
-    splide.go(index);
-  });
-}
-
-splide.on('mounted move', function () {
-  var thumbnail = thumbnails[splide.index];
-
-  if (thumbnail) {
-    if (current) {
-      current.classList.remove('is-active');
-    }
-
-    thumbnail.classList.add('is-active');
-    current = thumbnail;
-  }
-});
-splide.mount();
-
-/***/ }),
-
 /***/ "./node_modules/.pnpm/css-loader@5.2.7_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[17].oneOf[1].use[1]!./node_modules/.pnpm/postcss-loader@6.2.1_m6qh27jiicejwnzfgs742cokpe/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[17].oneOf[1].use[2]!./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/css/splide.min.css":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/.pnpm/css-loader@5.2.7_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[17].oneOf[1].use[1]!./node_modules/.pnpm/postcss-loader@6.2.1_m6qh27jiicejwnzfgs742cokpe/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[17].oneOf[1].use[2]!./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/css/splide.min.css ***!
@@ -4240,10 +4198,121 @@ module.exports = function (list, options) {
 
 /***/ })
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./assets/scripts/modules/splide.js"));
-/******/ }
-]);
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!******************************************!*\
+  !*** ./assets/scripts/modules/splide.js ***!
+  \******************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _splidejs_splide_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide/css */ "./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/css/splide.min.css");
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/.pnpm/@splidejs+splide@4.0.17/node_modules/@splidejs/splide/dist/js/splide.esm.js");
+
+
+var splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"]('#main-carousel', {
+  pagination: false
+});
+var thumbnails = document.getElementsByClassName('thumbnail');
+var current;
+
+for (var i = 0; i < thumbnails.length; i++) {
+  initThumbnail(thumbnails[i], i);
+}
+
+function initThumbnail(thumbnail, index) {
+  thumbnail.addEventListener('click', function () {
+    splide.go(index);
+  });
+}
+
+splide.on('mounted move', function () {
+  var thumbnail = thumbnails[splide.index];
+
+  if (thumbnail) {
+    if (current) {
+      current.classList.remove('is-active');
+    }
+
+    thumbnail.classList.add('is-active');
+    current = thumbnail;
+  }
+});
+splide.mount();
+})();
+
+/******/ })()
+;
 //# sourceMappingURL=splide.js.map

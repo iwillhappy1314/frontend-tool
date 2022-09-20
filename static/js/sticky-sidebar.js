@@ -1,21 +1,5 @@
-(self["webpackChunkwenprise_frontend_tool"] = self["webpackChunkwenprise_frontend_tool"] || []).push([["/static/js/sticky-sidebar"],{
-
-/***/ "./assets/scripts/modules/sticky-sidebar.js":
-/*!**************************************************!*\
-  !*** ./assets/scripts/modules/sticky-sidebar.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
-__webpack_require__(/*! script-loader!theia-sticky-sidebar */ "./node_modules/.pnpm/script-loader@0.7.2/node_modules/script-loader/index.js!./node_modules/.pnpm/theia-sticky-sidebar@1.7.0/node_modules/theia-sticky-sidebar/dist/theia-sticky-sidebar.js");
-
-if ($(document).width() > 1024) {
-  $('.rs-sticky-left, .rs-sticky-right').theiaStickySidebar({
-    additionalMarginTop: 32
-  });
-}
-
-/***/ }),
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/.pnpm/raw-loader@0.5.1/node_modules/raw-loader/index.js!./node_modules/.pnpm/theia-sticky-sidebar@1.7.0/node_modules/theia-sticky-sidebar/dist/theia-sticky-sidebar.js":
 /*!*********************************************************************************************************************************************************************************************!*\
@@ -85,10 +69,49 @@ module.exports = jQuery;
 
 /***/ })
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./assets/scripts/modules/sticky-sidebar.js"));
-/******/ }
-]);
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!**************************************************!*\
+  !*** ./assets/scripts/modules/sticky-sidebar.js ***!
+  \**************************************************/
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
+__webpack_require__(/*! script-loader!theia-sticky-sidebar */ "./node_modules/.pnpm/script-loader@0.7.2/node_modules/script-loader/index.js!./node_modules/.pnpm/theia-sticky-sidebar@1.7.0/node_modules/theia-sticky-sidebar/dist/theia-sticky-sidebar.js");
+
+if ($(document).width() > 1024) {
+  $('.rs-sticky-left, .rs-sticky-right').theiaStickySidebar({
+    additionalMarginTop: 32
+  });
+}
+})();
+
+/******/ })()
+;
 //# sourceMappingURL=sticky-sidebar.js.map

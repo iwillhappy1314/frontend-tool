@@ -1,57 +1,5 @@
-(self["webpackChunkwenprise_frontend_tool"] = self["webpackChunkwenprise_frontend_tool"] || []).push([["/static/js/magnific-popup"],{
-
-/***/ "./assets/scripts/modules/magnific-popup.js":
-/*!**************************************************!*\
-  !*** ./assets/scripts/modules/magnific-popup.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! magnific-popup */ "./node_modules/.pnpm/magnific-popup@1.1.0/node_modules/magnific-popup/dist/jquery.magnific-popup.js");
-/* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var magnific_popup_src_css_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! magnific-popup/src/css/main.scss */ "./node_modules/.pnpm/magnific-popup@1.1.0/node_modules/magnific-popup/src/css/main.scss");
-/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
-
-
-
-if ($('.rs-popup-image').length > 0) {
-  $('.rs-popup-image').magnificPopup({
-    type: 'image'
-  });
-}
-
-if ($('.rs-popup-video').length > 0) {
-  $('.rs-popup-video').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false
-  });
-}
-
-$('.rs-popup-gallery').magnificPopup({
-  delegate: 'a',
-  type: 'image',
-  tLoading: 'Loading image #%curr%...',
-  mainClass: 'mfp-img-mobile',
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-
-  },
-  image: {
-    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-    titleSrc: function titleSrc(item) {
-      return item.el.attr('title');
-    }
-  }
-});
-
-/***/ }),
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/.pnpm/css-loader@5.2.7_webpack@5.74.0/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[18].oneOf[1].use[1]!./node_modules/.pnpm/postcss-loader@6.2.1_m6qh27jiicejwnzfgs742cokpe/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[18].oneOf[1].use[2]!./node_modules/.pnpm/sass-loader@12.6.0_sass@1.54.0+webpack@5.74.0/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[18].oneOf[1].use[3]!./node_modules/.pnpm/magnific-popup@1.1.0/node_modules/magnific-popup/src/css/main.scss":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -2389,10 +2337,131 @@ module.exports = jQuery;
 
 /***/ })
 
-},
-/******/ __webpack_require__ => { // webpackRuntimeModules
-/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ var __webpack_exports__ = (__webpack_exec__("./assets/scripts/modules/magnific-popup.js"));
-/******/ }
-]);
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!**************************************************!*\
+  !*** ./assets/scripts/modules/magnific-popup.js ***!
+  \**************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! magnific-popup */ "./node_modules/.pnpm/magnific-popup@1.1.0/node_modules/magnific-popup/dist/jquery.magnific-popup.js");
+/* harmony import */ var magnific_popup__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(magnific_popup__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var magnific_popup_src_css_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! magnific-popup/src/css/main.scss */ "./node_modules/.pnpm/magnific-popup@1.1.0/node_modules/magnific-popup/src/css/main.scss");
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
+
+
+
+if ($('.rs-popup-image').length > 0) {
+  $('.rs-popup-image').magnificPopup({
+    type: 'image'
+  });
+}
+
+if ($('.rs-popup-video').length > 0) {
+  $('.rs-popup-video').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
+}
+
+$('.rs-popup-gallery').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  tLoading: 'Loading image #%curr%...',
+  mainClass: 'mfp-img-mobile',
+  gallery: {
+    enabled: true,
+    navigateByImgClick: true,
+    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+
+  },
+  image: {
+    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    titleSrc: function titleSrc(item) {
+      return item.el.attr('title');
+    }
+  }
+});
+})();
+
+/******/ })()
+;
 //# sourceMappingURL=magnific-popup.js.map

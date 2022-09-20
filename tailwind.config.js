@@ -24,9 +24,12 @@ module.exports = {
         '../single.php',
         '../comments.php',
         '../archive-project.php',
+        '../single-project.php',
         '../archive-product.php',
         '../single-product.php',
         '../404.php',
+        '../../../plugins/wenprise-content-components/src/**/*.php',
+        '../../../plugins/wenprise-content-components/templates/**/*.php',
     ],
     safelist: purgecssWhiteList.whitelist.concat([
         'ln-letters',
