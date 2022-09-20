@@ -1,5 +1,38 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+(self["webpackChunkwenprise_frontend_tool"] = self["webpackChunkwenprise_frontend_tool"] || []).push([["/static/js/isotope"],{
+
+/***/ "./assets/scripts/modules/isotope.js":
+/*!*******************************************!*\
+  !*** ./assets/scripts/modules/isotope.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
+var loadjs = __webpack_require__(/*! loadjs */ "./node_modules/.pnpm/loadjs@4.2.0/node_modules/loadjs/dist/loadjs.umd.js");
+
+loadjs([wenpriseSettings.staticPath + 'js/imagesloaded.pkgd.min.js', wenpriseSettings.staticPath + 'js/isotope.pkgd.min.js'], 'imagesloaded-isotope');
+loadjs.ready('imagesloaded-isotope', function () {
+  $('.rs-isotope__container').imagesLoaded(function () {
+    $('.rs-isotope__container').isotope({
+      itemSelector: '.rs-isotope__item',
+      layoutMode: 'fitRows'
+    });
+    $('.rs-isotope__filter li').on('click', function () {
+      $('.rs-isotope__filter li').removeClass('active');
+      $(this).addClass('active');
+      $('.rs-isotope__container').isotope({
+        filter: $(this).attr('data-filter'),
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    });
+  });
+});
+
+/***/ }),
 
 /***/ "./node_modules/.pnpm/loadjs@4.2.0/node_modules/loadjs/dist/loadjs.umd.js":
 /*!********************************************************************************!*\
@@ -337,66 +370,10 @@ module.exports = jQuery;
 
 /***/ })
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-/*!*******************************************!*\
-  !*** ./assets/scripts/modules/isotope.js ***!
-  \*******************************************/
-/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
-var loadjs = __webpack_require__(/*! loadjs */ "./node_modules/.pnpm/loadjs@4.2.0/node_modules/loadjs/dist/loadjs.umd.js");
-
-loadjs([wenpriseSettings.staticPath + 'js/imagesloaded.pkgd.min.js', wenpriseSettings.staticPath + 'js/isotope.pkgd.min.js'], 'imagesloaded-isotope');
-loadjs.ready('imagesloaded-isotope', function () {
-  $('.rs-isotope__container').imagesLoaded(function () {
-    $('.rs-isotope__container').isotope({
-      itemSelector: '.rs-isotope__item',
-      layoutMode: 'fitRows'
-    });
-    $('.rs-isotope__filter li').on('click', function () {
-      $('.rs-isotope__filter li').removeClass('active');
-      $(this).addClass('active');
-      $('.rs-isotope__container').isotope({
-        filter: $(this).attr('data-filter'),
-        animationOptions: {
-          duration: 750,
-          easing: 'linear',
-          queue: false
-        }
-      });
-      return false;
-    });
-  });
-});
-})();
-
-/******/ })()
-;
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exports__ = (__webpack_exec__("./assets/scripts/modules/isotope.js"));
+/******/ }
+]);
 //# sourceMappingURL=isotope.js.map

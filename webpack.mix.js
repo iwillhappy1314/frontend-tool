@@ -20,6 +20,8 @@ mix.webpackConfig({
         })],
 });
 
+mix.extract(['jquery']);
+
 mix.sass('assets/styles/main.scss', 'dist/styles').
     sass('assets/styles/account.scss', 'dist/styles').
     sass('assets/styles/cart.scss', 'dist/styles').
@@ -37,6 +39,8 @@ mix.sass('assets/styles/main.scss', 'dist/styles').
             require('css-mqpacker'),
         ],
     });
+
+mix.sass('assets/scripts/modules/swiper/swiper.scss', 'static/css');
 
 mix.js('assets/scripts/main.js', 'dist/scripts').
     js('assets/scripts/customizer.js', 'dist/scripts').

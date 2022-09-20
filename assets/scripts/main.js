@@ -14,14 +14,11 @@ const popupEL = $('.rs-popup-image,.rs-popup-gallery,.rs-popup-video');
 const isotopeEL = $('.rs-isotope__filter');
 const meanMenuEL = $('.rs-mean-menu');
 const accordionEL = $('.rs-accordion-container');
-const swiperEL = $('.rs-swiper-container');
+const swiperEL = $('.rs-swiper');
 const wowEL = $('.wow');
 const scrollSpyEL = $('.rs-scroll-nav');
 const splideEL = document.querySelectorAll('.splide');
 
-console.log(popupEL);
-
-console.log(splideEL.length);
 
 if (dropdownEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
