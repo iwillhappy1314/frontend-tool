@@ -117,6 +117,10 @@ if (splideEL.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
 }
 
+if (document.querySelectorAll('.rs-inquiry').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/inquiry.js'], 'inquiry');
+}
+
 (0,_components_footer__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 /***/ }),

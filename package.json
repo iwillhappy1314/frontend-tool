@@ -44,6 +44,7 @@
         "css-loader": "^6.7.1",
         "is-mobile": "^3.1.1",
         "jquery-smarttab": "^4.0.2",
+        "js-cookie": "^3.0.1",
         "loadjs": "^4.2.0",
         "magnific-popup": "^1.1.0",
         "photoswipe": "^4",
@@ -53,6 +54,7 @@
         "swiper": "^8.3.2",
         "theia-sticky-sidebar": "^1.7.0",
         "tippy.js": "^6.3.7",
+        "uniq": "^1.0.1",
         "wow.js": "^1.2.2"
     }
 }
