@@ -28,6 +28,7 @@ module.exports = {
         '../archive-product.php',
         '../single-product.php',
         '../404.php',
+        '../**/*.latte',
         '../../../plugins/wenprise-content-components/src/**/*.php',
         '../../../plugins/wenprise-content-components/templates/**/*.php',
     ],
