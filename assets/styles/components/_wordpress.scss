@@ -207,7 +207,7 @@ ul.blocks-gallery-grid {
 .pagination {
     @apply flex;
     li {
-        @apply block leading-none border border-gray-200 mr-2;
+        @apply block leading-none border border-gray-200 mr-2 rounded overflow-hidden;
         &.active {
             background-color: var(--wprs-primary-color);
             border-color: var(--wprs-primary-color);
@@ -217,11 +217,10 @@ ul.blocks-gallery-grid {
         }
 
         a {
-            @apply block px-3 py-2 text-gray-700;
+            @apply block px-3 py-2 text-gray-700 rounded;
         }
     }
 }
-
 
 .wp-calendar-nav,
 #wp-calendar {
