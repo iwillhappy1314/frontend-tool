@@ -27,6 +27,7 @@ specifiers:
   laravel-mix-versionhash: ^2.0.1
   loadjs: ^4.2.0
   magnific-popup: ^1.1.0
+  micromodal: ^0.4.10
   mix-white-sass-icons: ^0.2.0
   photoswipe: ^4
   postcss: ^8.4.5
@@ -60,6 +61,7 @@ dependencies:
   js-cookie: 3.0.1
   loadjs: 4.2.0
   magnific-popup: 1.1.0
+  micromodal: 0.4.10
   photoswipe: 4.1.3
   scss-loader: 0.0.1
   simple-scrollspy: 2.2.0
@@ -4993,6 +4995,11 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
+
+  /micromodal/0.4.10:
+    resolution: {integrity: sha512-BUrEnzMPFBwK8nOE4xUDYHLrlGlLULQVjpja99tpJQPSUEWgw3kTLp1n1qv0HmKU29AiHE7Y7sMLiRziDK4ghQ==}
+    engines: {node: '>=10'}
+    dev: false
 
   /miller-rabin/4.0.1:
     resolution: {integrity: sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O/Oxi8AiNouAHvDSzHS0viUJc+V5vm3eq91Xwqn9dp4jRA==}
