@@ -1,0 +1,146 @@
+@charset "utf-8";
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@import "base/functions";
+@import "base/mixins";
+@import "variables";
+
+@import "components/reset";
+@import "components/typo";
+// @import "components/button";
+// @import "components/input";
+@import "components/wordpress";
+// @import "components/elementor";
+@import "components/site";
+// @import "components/header";
+// @import "components/footer";
+// @import "components/entry";
+@import "components/block";
+// @import "components/dropdown";
+// @import "components/widget";
+@import "components/empty";
+// @import "components/wpuf";
+@import "components/fonts";
+
+.woocommerce-product-search {
+    @extend .search-form;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.post-type-archive .site__shop,
+.tax-product_cat .site__shop,
+.tax-product_tag .site__shop,
+.single-product .archive-header .woocommerce-breadcrumb,
+.related.products,
+.upsells.products {
+    @extend .container !optional;
+}
+
+.dropdown-nav-special-toggle {
+    @screen lg {
+        display: none;
+    }
+}
+
+
+.item-is-fixed {
+    top: 0;
+}
+
+.site__banner {
+    min-height: 200px;
+}
+
+@screen lg {
+    .f-mean-nav {
+        @apply hidden;
+    }
+}
+
+.splide__slide {
+    max-width: 100%;
+}
+
+.thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*	MINIMAL DESIGN
+ *	based on the sleek design of Jacob SÃ¤wensten ( http://www.jacobsawensten.com/ )
+ *	PDF: https://dribbble.com/shots/1460141-Free-minimal-browser-window/attachments/216671 */
+// 案例浏览器
+.c-browser {
+    position: relative;
+    padding: 32px 32px 0 32px;
+    // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    color: theme('colors.gray.800');
+    border-radius: 6px 6px 0 0;
+    overflow-x: hidden;
+    background-image: radial-gradient(farthest-corner at 20% 20%, #edf2f7, #2c5282) !important;
+
+    &--nourl {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+
+        &:after {
+            content: none;
+        }
+    }
+
+    &--mini {
+        padding: 35px 0 0 0;
+        box-shadow: none;
+        border: 0;
+
+        &:before {
+            height: 34px;
+            background: url('data:image/svg+xml;charset=utf-8,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="minimal-browser-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="Ellipse_1"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" cx="8" cy="8" r="5"/></g></g></svg>') 16px 10px no-repeat, url('data:image/svg+xml;charset=utf-8,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="minimal-browser-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="Ellipse_1"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" cx="8" cy="8" r="5"/></g></g></svg>') 32px 10px no-repeat, url('data:image/svg+xml;charset=utf-8,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="minimal-browser-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="Ellipse_1"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" cx="8" cy="8" r="5"/></g></g></svg>') 48px 10px no-repeat, #e8e8e8;
+        }
+
+        &:after {
+            content: none;
+        }
+    }
+
+    .card-image {
+        height: 450px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-header {
+        background: #d4ecf6;
+    }
+
+    .card-header-title {
+        justify-content: center;
+        border-bottom: 0;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
