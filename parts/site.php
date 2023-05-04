@@ -5,13 +5,8 @@ $site_id     = get_object_vars($site)[ 'blog_id' ];
 $site_name   = get_blog_details($site_id)->blogname;
 $site_option = get_blog_option($site_id, 'site_options');
 
-$screenshot_file = '';
-$screenshot      = bef_data_get($site_option, 'screenshot.url');
-
-if ( ! $screenshot) {
-    $screenshot      = trailingslashit(wp_upload_dir()[ 'baseurl' ]) . 'sites/' . $site_id . '/sites-export/screenshot.jpg';
-    $screenshot_file = trailingslashit(wp_upload_dir()[ 'basedir' ]) . 'sites/' . $site_id . '/sites-export/screenshot.jpg';
-}
+$screenshot      = trailingslashit(wp_upload_dir()[ 'baseurl' ]) . 'sites/' . $site_id . '/sites-export/screenshot.jpg';
+$screenshot_file = trailingslashit(wp_upload_dir()[ 'basedir' ]) . 'sites/' . $site_id . '/sites-export/screenshot.jpg';
 
 $site_url = 'https://' . $site->domain . $site->path;
 ?>

@@ -1,12 +1,7 @@
 <?php
 
 require_once(get_theme_file_path('includes/helpers.php'));
-require_once(get_theme_file_path('includes/class-cron.php'));
-
-add_action('after_setup_theme', function ()
-{
-    new Bef_Screenshot_Job();
-});
+require_once(get_theme_file_path('includes/api.php'));
 
 /**
  * Setup Child Theme Styles
