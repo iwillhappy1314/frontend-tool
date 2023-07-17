@@ -1,4 +1,4 @@
-function menuToggle() {
+export default  function menuToggle() {
     $('body').append('<div class="f-body-cover hidden" />');
     $('.menu-toggle').click(function() {
         $('body').toggleClass('f-menu-toggled');
@@ -30,5 +30,3 @@ function menuToggle() {
         return !checkElement.is('ul');
     });
 }
-
-export {menuToggle};

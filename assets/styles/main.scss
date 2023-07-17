@@ -1,5 +1,5 @@
 @charset "utf-8";
-// @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind screens;
@@ -10,20 +10,21 @@
 
 @import "components/reset";
 @import "components/typo";
-// @import "components/button";
-// @import "components/input";
+@import "components/button";
+@import "components/input";
 @import "components/wordpress";
-// @import "components/elementor";
+@import "components/elementor";
 @import "components/site";
-// @import "components/header";
-// @import "components/footer";
-// @import "components/entry";
+@import "components/header";
+@import "components/footer";
+@import "components/entry";
 @import "components/block";
-// @import "components/dropdown";
-// @import "components/widget";
+@import "components/dropdown";
+@import "components/widget";
 @import "components/empty";
-// @import "components/wpuf";
+@import "components/wpuf";
 @import "components/fonts";
+@import "components/comment";
 
 .woocommerce-product-search {
     @extend .search-form;

@@ -1,15 +1,15 @@
-function stickyNav() {
+export default function stickyNav() {
     const header = document.getElementById('masthead');
-    const body = document.getElementsByTagName('body')[0];
+    const body = document.body;
     const sticky = header.offsetTop + 0;
 
-    if (body.classList.contains('rs-sticky')) {
-        if (window.scrollY > sticky) {
-            body.classList.add('is-sticky');
-        } else {
-            body.classList.remove('is-sticky');
+    window.addEventListener('scroll', () => {
+        if (body.classList.contains('rs-sticky')) {
+            if (window.scrollY > sticky) {
+                body.classList.add('is-sticky');
+            } else {
+                body.classList.remove('is-sticky');
+            }
         }
-    }
+    });
 }
-
-export {stickyNav};

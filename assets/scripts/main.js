@@ -2,9 +2,10 @@
 
 var loadjs = require('loadjs');
 
-console.log(wenpriseSettings);
-
 import footerNav from './components/footer';
+import stickyNav from './components/nav/sticky';
+import RevealHeader from './components/nav/reveal-header';
+import menuToggle from './components/nav/off-canvas-menu';
 
 const dropdownEl = document.querySelectorAll('.rs-dropdown-toggle');
 const popoverEl = document.querySelectorAll('.rs-popover');
@@ -82,3 +83,6 @@ if (splideEL.length > 0) {
 }
 
 footerNav();
+stickyNav();
+RevealHeader();
+menuToggle();
