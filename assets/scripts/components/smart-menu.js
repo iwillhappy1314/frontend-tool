@@ -1,4 +1,6 @@
-function smartMenu() {
+require('smartmenus');
+
+export default function smartMenu() {
     //@see https://www.smartmenus.org/docs/
     jQuery('.sm, .product-categories').smartmenus({
         showFunction: function($ul, complete) {
@@ -11,5 +13,3 @@ function smartMenu() {
         hideTimeout : 100,
     });
 }
-
-export {smartMenu};

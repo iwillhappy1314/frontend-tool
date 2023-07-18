@@ -16,6 +16,8 @@
 @import "components/elementor";
 @import "components/site";
 @import "components/header";
+@import "components/menu";
+@import "components/menu-toggle";
 @import "components/footer";
 @import "components/entry";
 @import "components/block";
@@ -25,6 +27,54 @@
 @import "components/wpuf";
 @import "components/fonts";
 @import "components/comment";
+
+$primary: #C90815;
+$primary-text: #262224;
+
+// 桌面端
+@include above(992px){
+    :root{
+        --menu-bg-color: #fff;
+        --menu-text-color: #262224;
+        --menu-highlight-text-color: #C90815;
+    }
+
+    .sub-arrow{
+        display: none;
+    }
+
+    .sm-menu a.has-submenu{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+// 移动端
+@include below(992px){
+    :root{
+        --header-bg-color: #fff;
+        --menu-bg-color: #262224;
+        --menu-text-color: #fff;
+        --menu-border-color: #222;
+        --menu-highlight-text-color: #C90815;
+    }
+
+    .site__header{
+        padding: 0 12px;
+    }
+}
+
+@include above(992px){
+    :root{
+        --menu-bg-color: #fff;
+        --menu-text-color: #262224;
+        --menu-highlight-text-color: #C90815;
+    }
+}
+
+.menu-toggle{
+    --menu-text-color: #262224;
+}
 
 .woocommerce-product-search {
     @extend .search-form;

@@ -71,7 +71,7 @@ if (mix.inProduction()) {
 }
 
 mix.browserSync({
-    proxy         : 's.as',
+    proxy         : 'qinghaixinbao.local:58071',
     files         : [
         {
             match  : [
