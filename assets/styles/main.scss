@@ -26,13 +26,14 @@
 @import "components/empty";
 @import "components/wpuf";
 @import "components/fonts";
-@import "vars";
+// @import "vars";
 
 $primary: #c90815;
 $primary-text: #262224;
 
 :root{
   --menu-highlight-text-color: var(--primary-color);
+  --white: #fff;
 }
 
 // 桌面端
