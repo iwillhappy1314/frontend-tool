@@ -26,36 +26,25 @@
 @import "components/empty";
 @import "components/wpuf";
 @import "components/fonts";
+@import "vars";
 
 $primary: #c90815;
 $primary-text: #262224;
 
-:root {
-  --white: #fff;
-
-  --primary-color: #c90815;
-  --alt-color: #071ba6;
-
-  --lighter-bg-color: #efe8e8;
-  --light-bg-color: #e2d8d8;
-  --bg-color: #c7b7b8;
-
-  --text-color: #262224;
-  --light-text-color: #4e4749;
-  --lighter-text-color: #776c6e;
+:root{
+  --menu-highlight-text-color: var(--primary-color);
 }
 
 // 桌面端
 @include above(992px) {
   :root {
     --menu-bg-color: transparent;
-    --menu-text-color: #262224;
-    --menu-highlight-text-color: #c90815;
-    --header-bg-color: #fff;
+    --menu-text-color: var(--text-color);
+    --header-bg-color: var(--white);
   }
 
   .sm-menu ul{
-    --menu-bg-color: #fff;
+    --menu-bg-color: var(--white);
   }
 
   .sub-arrow {
@@ -71,20 +60,17 @@ $primary-text: #262224;
 // 移动端
 @include below(992px) {
   :root {
-    --header-bg-color: #fff;
-    --menu-bg-color: #262224;
-    --menu-text-color: #fff;
+    --header-bg-color: var(--white);
+    --menu-bg-color: var(--text-color);
+    --menu-text-color: var(--white);
     --menu-border-color: #222;
-    --menu-highlight-text-color: #c90815;
-  }
 
-  .site__header {
-    padding: 0 12px;
+    --global-content-edge-padding: 24px;
   }
 }
 
 .menu-toggle {
-  --menu-text-color: #262224;
+  --menu-text-color: var(--text-color);
 }
 
 .woocommerce-product-search {
