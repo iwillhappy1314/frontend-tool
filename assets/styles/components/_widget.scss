@@ -1,20 +1,16 @@
-$bg: $bg-base;
-$text-color: $text-base;
-$text-hover-color: darken($text-base, 5%);
-
 .widget {
     &-title {
         @apply text-lg font-medium mb-4;
     }
 
     li {
-        @apply text-sm leading-relaxed leading-6;
+        @apply text-sm leading-relaxed;
         a {
             @apply flex items-center justify-between;
-            color: $text-color;
+            color: var(--text-color);
 
             &:hover {
-                color: $text-hover-color;
+                color: var(--primary-color);
             }
         }
 
@@ -26,15 +22,15 @@ $text-hover-color: darken($text-base, 5%);
 
 .widget--tree {
     .menu {
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--bg-color);
         & > li {
             @apply py-0 my-0 bg-white;
             & > a {
                 @apply bg-white;
                 padding: 12px 16px;
-                border-bottom: 1px solid #eee;
-                border-left: 1px solid #eee;
-                border-right: 1px solid #eee;
+                border-bottom: 1px solid var(--bg-color);
+                border-left: 1px solid var(--bg-color);
+                border-right: 1px solid var(--bg-color);
             }
 
             & > ul.sub-menu {
@@ -78,7 +74,7 @@ $text-hover-color: darken($text-base, 5%);
 
         li {
             @apply text-base leading-normal my-2;
-            color: $text-color;
+            color: var(--light-text-color);
         }
     }
 }
@@ -94,7 +90,7 @@ $text-hover-color: darken($text-base, 5%);
  */
 .widget_categories {
     ul {
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--bg-color);
         border-radius: 2px;
 
         li {
@@ -102,13 +98,14 @@ $text-hover-color: darken($text-base, 5%);
             margin-bottom: 0;
 
             a {
-                @apply block bg-white;
+                @apply block;
                 display: block;
                 padding: 12px 35px 12px 15px;
-                border-left: 1px solid #eee;
-                border-right: 1px solid #eee;
-                border-bottom: 1px solid #eee;
-                color: #222;
+                background-color: var(--lighter-bg-color);
+                border-left: 1px solid var(--bg-color);
+                border-right: 1px solid var(--bg-color);
+                border-bottom: 1px solid var(--bg-color);
+                color: var(--light-text-color);
                 position: relative;
                 line-height: 1.35em;
                 opacity: 1;
@@ -120,7 +117,7 @@ $text-hover-color: darken($text-base, 5%);
                     content: "\e9a7";
                     font-family: 'icomoon';
                     font-size: 11px;
-                    color: #d1d1d1;
+                    color: var(--lighter-text-color);
                     position: absolute;
                     right: 15px;
                     top: 50%;
@@ -132,8 +129,8 @@ $text-hover-color: darken($text-base, 5%);
             &.current-cat,
             &.current_page_item {
                 a {
-                    background-color: #f7f7f7;
-                    border-color: #eee;
+                    background-color: var(--light-bg-color);
+                    border-color: var(--bg-color);
                 }
             }
         }
@@ -240,7 +237,7 @@ $text-hover-color: darken($text-base, 5%);
         }
 
         &:after {
-            background: #eee;
+            background: var(--lighter-bg-color);
             position: absolute;
             content: "";
             left: -3000px;
@@ -256,7 +253,7 @@ $text-hover-color: darken($text-base, 5%);
 
         ul.menu li {
             &:hover a, &.current-menu-item a, &.current-page-item a {
-                color: #fff;
+                color: var(--white);
             }
 
             a {

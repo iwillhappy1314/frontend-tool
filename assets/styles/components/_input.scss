@@ -1,5 +1,5 @@
-$bg-color: $bg-base;
-$border-color: $border-base;
+$bg-color: var(--white);
+$border-color: var(--bg-color);
 
 input,
 select,

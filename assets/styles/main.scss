@@ -27,60 +27,72 @@
 @import "components/wpuf";
 @import "components/fonts";
 
-$primary: #C90815;
+$primary: #c90815;
 $primary-text: #262224;
 
+:root {
+  --white: #fff;
+
+  --primary-color: #c90815;
+  --alt-color: #071ba6;
+
+  --lighter-bg-color: #efe8e8;
+  --light-bg-color: #e2d8d8;
+  --bg-color: #c7b7b8;
+
+  --text-color: #262224;
+  --light-text-color: #4e4749;
+  --lighter-text-color: #776c6e;
+}
+
 // 桌面端
-@include above(992px){
-    :root{
-        --menu-bg-color: #fff;
-        --menu-text-color: #262224;
-        --menu-highlight-text-color: #C90815;
-    }
+@include above(992px) {
+  :root {
+    --menu-bg-color: transparent;
+    --menu-text-color: #262224;
+    --menu-highlight-text-color: #c90815;
+    --header-bg-color: #fff;
+  }
 
-    .sub-arrow{
-        display: none;
-    }
+  .sm-menu ul{
+    --menu-bg-color: #fff;
+  }
 
-    .sm-menu a.has-submenu{
-        padding-left: 12px;
-        padding-right: 12px;
-    }
+  .sub-arrow {
+    display: none;
+  }
+
+  .sm-menu a.has-submenu {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 // 移动端
-@include below(992px){
-    :root{
-        --header-bg-color: #fff;
-        --menu-bg-color: #262224;
-        --menu-text-color: #fff;
-        --menu-border-color: #222;
-        --menu-highlight-text-color: #C90815;
-    }
+@include below(992px) {
+  :root {
+    --header-bg-color: #fff;
+    --menu-bg-color: #262224;
+    --menu-text-color: #fff;
+    --menu-border-color: #222;
+    --menu-highlight-text-color: #c90815;
+  }
 
-    .site__header{
-        padding: 0 12px;
-    }
+  .site__header {
+    padding: 0 12px;
+  }
 }
 
-@include above(992px){
-    :root{
-        --menu-bg-color: #fff;
-        --menu-text-color: #262224;
-        --menu-highlight-text-color: #C90815;
-    }
-}
-
-.menu-toggle{
-    --menu-text-color: #262224;
+.menu-toggle {
+  --menu-text-color: #262224;
 }
 
 .woocommerce-product-search {
-    @extend .search-form;
+  @extend .search-form;
 }
 
 .clearfix {
-    @include clearfix;
+  @include clearfix;
 }
 
 .post-type-archive .site__shop,
@@ -89,108 +101,106 @@ $primary-text: #262224;
 .single-product .archive-header .woocommerce-breadcrumb,
 .related.products,
 .upsells.products {
-    @extend .container !optional;
+  @extend .container !optional;
 }
 
 .dropdown-nav-special-toggle {
-    @screen lg {
-        display: none;
-    }
+  @screen lg {
+    display: none;
+  }
 }
 
 
 .item-is-fixed {
-    top: 0;
+  top: 0;
 }
 
 .site__banner {
-    min-height: 200px;
+  min-height: 200px;
 }
 
 @screen lg {
-    .f-mean-nav {
-        @apply hidden;
-    }
+  .f-mean-nav {
+    @apply hidden;
+  }
 }
 
 .splide__slide {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .thumbnails {
-    display: flex;
-    margin: 1rem auto 0;
-    padding: 0;
-    justify-content: center;
+  display: flex;
+  margin: 1rem auto 0;
+  padding: 0;
+  justify-content: center;
 }
 
 .thumbnail {
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    list-style: none;
-    margin: 0 0.2rem;
-    cursor: pointer;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
 }
 
 .thumbnail img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
+.widget_categories ul {
+  border: 0;
+}
 
-/*	MINIMAL DESIGN
- *	based on the sleek design of Jacob SÃ¤wensten ( http://www.jacobsawensten.com/ )
- *	PDF: https://dribbble.com/shots/1460141-Free-minimal-browser-window/attachments/216671 */
-// 案例浏览器
-.c-browser {
-    position: relative;
-    padding: 32px 32px 0 32px;
-    // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    font-family: sans-serif;
-    color: theme('colors.gray.800');
-    border-radius: 6px 6px 0 0;
-    overflow-x: hidden;
-    background-image: radial-gradient(farthest-corner at 20% 20%, #edf2f7, #2c5282) !important;
+.widget_categories ul li {
+  & > a {
+    border-left: 0;
+    border-right: 0;
+    padding: 16px 16px 16px 35px;
+    font-size: 18px;
 
-    &--nourl {
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,.1);
-
-        &:after {
-            content: none;
-        }
+    .icon{
+      display: none;
     }
 
-    &--mini {
-        padding: 35px 0 0 0;
-        box-shadow: none;
-        border: 0;
-
-        &:before {
-            height: 34px;
-            background: url('data:image/svg+xml;charset=utf-8,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="minimal-browser-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="Ellipse_1"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" cx="8" cy="8" r="5"/></g></g></svg>') 16px 10px no-repeat, url('data:image/svg+xml;charset=utf-8,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="minimal-browser-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="Ellipse_1"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" cx="8" cy="8" r="5"/></g></g></svg>') 32px 10px no-repeat, url('data:image/svg+xml;charset=utf-8,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="minimal-browser-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><g id="Ellipse_1"><g><circle fill-rule="evenodd" clip-rule="evenodd" fill="%23B3B3B3" cx="8" cy="8" r="5"/></g></g></svg>') 48px 10px no-repeat, #e8e8e8;
-        }
-
-        &:after {
-            content: none;
-        }
+    &:after {
+      content: "\e9a2";
+      right: auto;
+      left: 15px;
     }
+  }
 
-    .card-image {
-        height: 450px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  .children{
+    a{
+      padding-left: 56px;
+      &:after{
+        content: '\e9c1';
+        left: 36px;
+      }
     }
+  }
+}
 
-    .card-header {
-        background: #d4ecf6;
-    }
+.widget_categories__title{
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 16px 0;
+  text-align: center;
+  font-size: 22px;
+}
 
-    .card-header-title {
-        justify-content: center;
-        border-bottom: 0;
-        font-weight: 400;
-        font-size: 16px;
-    }
+.widget_categories ul li.current-cat a,
+.widget_categories ul li.current_page_item a {
+  border-left: 3px solid var(--primary-color);
+}
+
+.widget_categories ul li.current-cat > a,
+.widget_categories ul li.current_page_item > a{
+  color: var(--primary-color);
+
+  &:after{
+    color: var(--primary-color);
+  }
 }
