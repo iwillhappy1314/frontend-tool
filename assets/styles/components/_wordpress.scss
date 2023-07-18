@@ -40,7 +40,8 @@ img.wp-post-image {
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
-    @apply leading-loose italic text-xs text-gray-700;
+    @apply leading-loose italic text-xs;
+    color: var(--light-gray-color);
 }
 
 .search-form {
@@ -162,7 +163,6 @@ ul.wp-block-gallery {
 
 .nav-previous,
 .previous-image {
-
     &:before{
         @apply mr-2;
         font-family: icomoon, sans-serif;
@@ -190,8 +190,9 @@ ul.blocks-gallery-grid {
 }
 
 .wp-block-quote {
-    @apply pl-4 py-2 mb-4 border-l-4 bg-gray-200;
-    border-color: var(--wprs-primary-color);
+    @apply pl-4 py-2 mb-4 border-l-4;
+    border-color: var(--primary-color);
+    background-color: var(--lighter-gray-color);
 
     p {
         &:last-child {
@@ -201,23 +202,27 @@ ul.blocks-gallery-grid {
 }
 
 .wp-block-code {
-    @apply bg-gray-100 border border-gray-200 p-4 rounded-sm;
+    @apply border p-4 rounded-sm;
+    border-color: var(--light-gray-color);
+    background-color: var(--lighter-gray-color);
 }
 
 .pagination {
     @apply flex;
     li {
-        @apply block leading-none border border-gray-200 mr-2 rounded overflow-hidden;
+        @apply block leading-none border mr-2 rounded overflow-hidden;
+        border-color: var(--light-gray-color);
         &.active {
-            background-color: var(--wprs-primary-color);
-            border-color: var(--wprs-primary-color);
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
             a {
                 @apply text-white;
             }
         }
 
         a {
-            @apply block px-3 py-2 text-gray-700 rounded;
+            @apply block px-3 py-2 rounded;
+            color: var(--light-text-color);
         }
     }
 }
@@ -227,7 +232,7 @@ ul.blocks-gallery-grid {
     @apply m-0 w-full;
     font-size: 13px;
     line-height: 1.846153846;
-    color: #686868;
+    color: var(--light-gray-color);
 }
 
 #wp-calendar th,
