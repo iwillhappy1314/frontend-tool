@@ -15,7 +15,7 @@
     &__title{
         @apply text-xl leading-normal mb-2;
         a{
-            @apply text-gray-800;
+            color: var(--text-color);
         }
 
         @screen lg{
@@ -24,7 +24,8 @@
     }
 
     &__desc {
-        @apply text-gray-700 text-base;
+        @apply text-base;
+        color: var(--light-text-color);
     }
 
     &__footer{
@@ -44,15 +45,16 @@
         }
 
         & > span {
-            @apply mr-2 text-gray-500;
+            @apply mr-2;
             font-family: sans-serif, Arial;
+            color: var(--lighter-text-color);
 
             &:last-child {
                 @apply mr-0;
             }
 
             a {
-                @apply text-gray-500;
+                color: var(--lighter-text-color);
             }
         }
     }
@@ -63,7 +65,7 @@
             @apply mr-2;
 
             &:hover {
-                color: $primary;
+                color: var(--primary-color);
             }
         }
     }
@@ -72,12 +74,12 @@
         a {
             @apply text-white;
             padding: 2px 8px;
-            background: $primary;
+            background: var(--primary-color);
             border-radius: 16px;
             font-size: 13px;
 
             &:hover {
-                @apply text-white;
+                color: var(--white);
             }
 
             &:active {
@@ -87,7 +89,7 @@
     }
 
     &__date{
-        @apply text-gray-600;
+        color: var(--lighter-text-color);
     }
 
     &__more {
@@ -99,7 +101,9 @@
 .post-categories{
     li{
         a{
-            @apply inline-block leading-none px-2 py-1 bg-gray-300 text-gray-600 text-sm rounded-sm;
+            @apply inline-block leading-none px-2 py-1 text-sm rounded-sm;
+            color: var(--lighter-text-color);
+            background-color: var(--lighter-gray-color);
         }
     }
 }

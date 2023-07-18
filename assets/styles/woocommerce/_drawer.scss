@@ -160,8 +160,8 @@
 
     .count {
         @apply inline-block relative text-center text-xs border;
-        color: var(--wprs-primary-color);
-        border-color: var(--wprs-primary-color);
+        color: var(--primary-color);
+        border-color: var(--primary-color);
         width: 28px;
         height: 28px;
         margin-left: 5px;
@@ -173,7 +173,7 @@
 
         &::after {
             @apply absolute border border-b-0;
-            border-color: var(--wprs-primary-color);
+            border-color: var(--primary-color);
             bottom: 90%;
             left: 50%;
             width: 10px;

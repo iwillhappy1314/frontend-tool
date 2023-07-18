@@ -6,17 +6,17 @@ ul.rs-accordion {
     padding: 20px;
     margin: 0;
     list-style: none;
-    background-color: #f9f9fa;
+    background-color: var(--lighter-gray-color);
 
     li {
         position: relative;
         display: block;
         width: 100%;
         height: auto;
-        background-color: #fff;
+        background-color: var(--white);
         padding: 20px;
         margin: 0 auto 15px auto;
-        border: 1px solid #eee;
+        border: 1px solid var(--light-gray-color);
         border-radius: 5px;
         cursor: pointer;
 
@@ -41,12 +41,12 @@ ul.rs-accordion {
             cursor: pointer;
 
             &:after {
-                content: "+";
+                content: "\ea51";
                 font-family: "icomoon";
                 position: absolute;
                 right: 0;
                 top: 0;
-                color: #fcc110;
+                color: var(--primary-color);
                 transition: all 0.3s ease-in-out;
                 font-size: 18px;
             }

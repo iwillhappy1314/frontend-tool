@@ -13,13 +13,13 @@ textarea {
     font-weight: 400;
 
     &:hover {
-        border-color: var(--wprs-primary-color);
+        border-color: var(--primary-color);
     }
 
     &:focus,
     &:active {
         @apply outline-none;
-        border-color: var(--wprs-primary-color);
+        border-color: var(--primary-color);
         box-shadow: 0 0 0 0.125em rgba(50, 115, 220, .25);
     }
 

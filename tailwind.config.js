@@ -29,6 +29,9 @@ module.exports = {
         '../archive-product.php',
         '../single-product.php',
         '../page-templates.php',
+        '../single-member.php',
+        '../single-business.php',
+        '../single-company.php',
         '../404.php',
     ],
     safelist: purgecssWhiteList.whitelist.concat([

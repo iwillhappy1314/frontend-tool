@@ -10,32 +10,51 @@ button,
 }
 
 .rs-button {
-    @apply relative cursor-pointer bg-white bg-gray-100 leading-none text-gray-700 font-medium border border-gray-500 rounded text-center align-middle;
+    @apply relative cursor-pointer leading-none text-gray-700 font-medium border rounded text-center align-middle;
     transition: all .15s ease-in-out;
     padding: calc(.75em - 1px) 1.5em;
+    background-color: var(--lighter-gray-color);
+    border-color: var(--gray-color);
+    color: var(--light-text-color);
 
     &:hover {
-        @apply bg-gray-200;
+        background-color: var(--light-gray-color);
+        border-color: var(--gray-color);
     }
 
     &:focus,
     &:active{
-        @apply bg-gray-300 outline-none;
+        @apply outline-none;
+        background-color: var(--light-gray-color);
     }
 
     &--primary{
         @apply bg-blue-500 border-blue-600 text-white;
+        background-color: var(--primary-color);
+        border-color: color-mix(in srgb, var(--primary-color) 75%, black);
+        color: var(--white);
 
         &:hover{
-            @apply bg-blue-700 border-blue-800;
+            background-color: color-mix(in srgb, var(--primary-color) 90%, black);
+            border-color: color-mix(in srgb, var(--primary-color) 65%, black);
+        }
+
+        &:focus,
+        &:active{
+            @apply outline-none;
+            background-color: color-mix(in srgb, var(--primary-color) 90%, black);
         }
     }
 
     &--ghost{
-        @apply bg-transparent text-blue-700 border-blue-500;
+        @apply bg-transparent;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
 
         &:hover{
-            @apply bg-blue-500 text-white border-transparent;
+            @apply border-transparent;
+            background-color: var(--primary-color);
+            color: var(--white);
         }
     }
 

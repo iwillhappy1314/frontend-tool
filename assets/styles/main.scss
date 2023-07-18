@@ -26,7 +26,7 @@
 @import "components/empty";
 @import "components/wpuf";
 @import "components/fonts";
-// @import "vars";
+@import "vars";
 
 $primary: #c90815;
 $primary-text: #262224;
@@ -149,13 +149,37 @@ $primary-text: #262224;
     font-size: 18px;
 
     .icon{
-      display: none;
+      display: block;
+      text-align: right;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      height: 56px;
     }
 
     &:after {
       content: "\e9a2";
       right: auto;
       left: 15px;
+      transition: .3s;
+    }
+  }
+
+  &.sub-menu{
+    ul.children{
+      display: none;
+    }
+  }
+
+  &.sub-menu.active{
+    > a:after{
+      transform: rotate(90deg);
+    }
+
+    ul.children{
+      display: block;
     }
   }
 
@@ -178,6 +202,10 @@ $primary-text: #262224;
   font-size: 22px;
 }
 
+.widget_categories > ul > li > a:after{
+  margin-top: -12px;
+}
+
 .widget_categories ul li.current-cat a,
 .widget_categories ul li.current_page_item a {
   border-left: 3px solid var(--primary-color);
@@ -190,4 +218,8 @@ $primary-text: #262224;
   &:after{
     color: var(--primary-color);
   }
+}
+
+.sm-menu li.current-business-ancestor>a{
+  color: var(--primary-color);
 }
