@@ -56,8 +56,9 @@
     }
 
     a:not(.button):hover {
-        @apply no-underline border-b border-gray-500;
+        @apply no-underline border-b;
         color: var(--primary-color);
+        border-color: var(--lighter-text-color);
     }
 
     /* 同 ul/ol，在文章中应用 table 基本格式 */
@@ -68,7 +69,8 @@
     table th,
     table td,
     table caption {
-        @apply border-b border-gray-300 text-gray-700 py-2 text-left;
+        @apply border-b border-gray-300 py-2 text-left;
+        color: var(--text-color);
     }
 
     table th,
@@ -81,8 +83,8 @@
     }
 
     em, legend, caption {
-        @apply text-gray-900;
         font-weight: inherit;
+        color: var(--text-color);
     }
 
     /* Responsive images */

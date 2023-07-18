@@ -9,7 +9,8 @@
     @apply mb-10 ml-0 pl-0;
 
     .avatar {
-        @apply rounded-full border border-gray-300;
+        @apply rounded-full border;
+        border-color: var(--light-gray-color);
     }
 
     ol.comment-list {
@@ -40,7 +41,7 @@
 
 .comment-form {
     p {
-        @apply w-full;
+        @apply w-full mb-6;
 
         &.logged-in-as {
             @apply mb-6;
@@ -53,7 +54,7 @@
     }
 
     label {
-        @apply block leading-none;
+        @apply block leading-none mb-2;
     }
 
     input[type="text"],
@@ -65,13 +66,14 @@
 
     input[type="submit"]{
         @include button-base();
-        @include button-bg(#f3f3f3, darken(#f3f3f3, 3%), darken(#f3f3f3, 6%));
-        @include button-border(#ddd, #dadada, #d3d3d3);
-        color: #383838;
+        @include button-bg(var(--lighter-gray-color), var(--light-gray-color), var(--gray-color));
+        @include button-border(var(--light-gray-color), var(--gray-color), var(--gray-color));
+        color: var(--light-text-color);
     }
 
     &-cookies-consent {
         @apply flex w-full items-center text-sm text-gray-600;
+        color: var(--lighter-text-color);
     }
 
     @screen lg {
@@ -93,13 +95,17 @@
     .comment-form-cookies-consent {
         @apply flex items-center;
         label {
-            margin-bottom: 0;
+            @apply mb-0;
         }
     }
 }
 
 .required {
     color: red;
+}
+
+#cancel-comment-reply-link{
+    @apply ml-3;
 }
 
 
@@ -109,6 +115,8 @@
 
     .comment-body {
         @apply relative border border-gray-300 bg-gray-100;
+        background-color: var(--lightest-gray-color);
+        border-color: var(--lighter-gray-color);
         padding: 25px 25px 25px 98px;
         margin: 2em 0 0;
     }
@@ -125,7 +133,8 @@
         }
 
         b {
-            @apply font-normal text-gray-600;
+            @apply font-normal;
+            color: var(--lighter-text-color);
         }
     }
 
@@ -134,12 +143,14 @@
         margin-bottom: 10px;
 
         a {
-            @apply text-xs text-gray-500;
+            @apply text-xs;
+            color: var(--lighter-text-color);
         }
     }
 
     &-reply-link {
-        @apply inline-block mt-2 text-gray-500;
+        @apply inline-block mt-2;
+        color: var(--lighter-text-color);
     }
 
     &-reply-title {
@@ -147,11 +158,12 @@
     }
 
     &-notes {
-        @apply text-gray-500;
+        color: var(--lighter-text-color);
     }
 
     &-content {
-        @apply mt-3 text-gray-800;
+        @apply mt-3;
+        color: var(--text-color);
     }
 
     &-navigation {

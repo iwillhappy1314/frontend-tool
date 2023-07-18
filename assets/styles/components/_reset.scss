@@ -1,6 +1,6 @@
 body {
-    color: $text-base;
-    background-color: $bg-base;
+    color: var(--text-color);
+    background-color: var(--white);
     @apply leading-normal;
 }
 

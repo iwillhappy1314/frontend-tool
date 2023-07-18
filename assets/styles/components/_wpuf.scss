@@ -87,9 +87,10 @@ ul.wpuf-column-fields{
 }
 
 .wpuf-form-sub-label{
-    @apply absolute text-sm text-gray-600;
+    @apply absolute text-sm;
     right: 10px;
     top: 7px;
+    color: var(--lighter-text-color);
 }
 
 .wpuf-error-msg{
@@ -142,11 +143,11 @@ ul.wpuf-column-fields{
     }
 
     .mce-edit-area {
-        border-right: 1px solid #eee !important;
+        border-right: 1px solid var(--lighter-gray-color) !important;
     }
 
     .mce-top-part {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--lighter-gray-color);
 
         &::before {
             content: none;
@@ -172,7 +173,8 @@ ul.wpuf-column-fields{
 }
 
 .wpuf-help{
-    @apply text-sm text-gray-600;
+    @apply text-sm;
+    color: var(--lighter-text-color);
 }
 
 .wpuf-submit-button,
