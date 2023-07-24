@@ -13,6 +13,19 @@ $icomoon-font-path: "../fonts" !default;
     src: url(../fonts/iconfont.eot?u64pwc#iefix) format("embedded-opentype"), url(../fonts/iconfont.ttf?u64pwc) format("truetype"), url(../fonts/iconfont.woff?u64pwc) format("woff"), url(../fonts/iconfont.svg?u64pwc#icomoon) format("svg")
 }
 
+[class^="rsicon-"], [class*=" rsicon-"]{
+    font-family: rsicon, sans-serif;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 $ws_icon-list: "grid-fill" "\e800",
 "layout-grid-fill" "\e801";
