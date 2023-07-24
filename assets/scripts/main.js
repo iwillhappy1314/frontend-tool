@@ -88,6 +88,10 @@ if ($('.rsp-tabs').length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'splide');
 }
 
+if ($('.rs-shuffle__container').length > 0) {
+    loadjs([wenpriseSettings.staticPath + 'js/shuffle.js'], 'splide');
+}
+
 footerNav();
 stickyNav();
 RevealHeader();
