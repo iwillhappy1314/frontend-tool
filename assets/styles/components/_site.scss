@@ -25,6 +25,10 @@ body{
             max-width: $tablet - 48px;
         }
     }
+
+    &--full{
+        padding: 0 var(--global-content-edge-padding);
+    }
 }
 
 .site .elementor-section.elementor-section-boxed.elementor-inner-section > .elementor-container{
