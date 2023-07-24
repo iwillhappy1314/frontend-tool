@@ -27,9 +27,6 @@ $icomoon-font-path: "../fonts" !default;
     -moz-osx-font-smoothing: grayscale;
 }
 
-$ws_icon-list: "grid-fill" "\e800",
-"layout-grid-fill" "\e801";
-
 @each $name, $glyph in $ws_icon-list {
     .rsicon-#{$name}:before {
         display: inline-block;
