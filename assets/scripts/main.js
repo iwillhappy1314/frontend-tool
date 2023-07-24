@@ -22,6 +22,7 @@ const swiperEL = $('.rs-swiper');
 const wowEL = $('.wow');
 const scrollSpyEL = $('.rs-scroll-nav');
 const splideEL = document.querySelectorAll('.splide');
+const rspTabsEL = $('.rsp-tabs');
 
 if (dropdownEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
@@ -81,6 +82,10 @@ if (scrollSpyEL.length > 0) {
 
 if (splideEL.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
+}
+
+if ($('.rsp-tabs').length > 0) {
+    loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'splide');
 }
 
 footerNav();
