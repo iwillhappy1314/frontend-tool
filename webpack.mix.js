@@ -56,7 +56,9 @@ mix.js('assets/scripts/modules/bootstrap.js', 'static/js').
     js('assets/scripts/modules/swiper/swiper.js', 'static/js').
     js('assets/scripts/modules/wow/wow.js', 'static/js').
     js('assets/scripts/modules/splide.js', 'static/js').
-    js('assets/scripts/modules//micro-modal/micro-modal.js', 'static/js').
+    js('assets/scripts/modules/response-tabs.js', 'static/js').
+    js('assets/scripts/modules/smart-tab.js', 'static/js').
+    js('assets/scripts/modules/micro-modal/micro-modal.js', 'static/js').
     js('assets/scripts/modules/isotope.js', 'static/js');
 
 mix.copyWatched('assets/images', 'dist/images').

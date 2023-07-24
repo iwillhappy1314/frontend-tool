@@ -6,7 +6,7 @@ import footerNav from './components/footer-nav';
 import stickyNav from './components/sticky';
 import RevealHeader from './components/reveal-header';
 import menuToggle from './components/off-canvas-menu';
-import smartMenu from './components/smart-menu';
+import smartMenu from './modules/smart-menu';
 
 const dropdownEl = document.querySelectorAll('.rs-dropdown-toggle');
 const popoverEl = document.querySelectorAll('.rs-popover');
