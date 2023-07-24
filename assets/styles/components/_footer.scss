@@ -1,9 +1,9 @@
 .site__footer {
-    --gray-color: #004178;
-    --text-color: #fff;
-    --text-hover-color: #fff;
+    --footer-bg-color: var(--light-text-color);
+    --footer-text-color: var(--white);
+    --footer-text-hover-color: var(--white);
 
-    background-color: var(--gray-color);
+    background-color: var(--footer-bg-color);
 
     ul {
         @apply m-0 p-0 list-none;
@@ -30,10 +30,10 @@
 
         li {
             a {
-                color: var(--text-color);
+                color: var(--footer-text-color);
 
                 &:hover {
-                    color: var(--text-hover-color);
+                    color: var(--footer-text-hover-color);
                 }
             }
         }
@@ -42,13 +42,13 @@
 
 .site__info {
     @apply mx-auto;
-    color: var(--text-color);
+    color: var(--footer-text-color);
 
     a {
-        color: var(--text-color);
+        color: var(--footer-text-color);
 
         &:hover {
-            color: var(--text-hover-color);
+            color: var(--footer-text-hover-color);
         }
     }
 }
@@ -63,7 +63,7 @@
 
 .rs-widgets--footer {
     @apply flex -mx-4 flex-wrap;
-    color: var(--text-color);
+    color: var(--footer-text-color);
 
     @screen lg {
         @apply flex-nowrap;
