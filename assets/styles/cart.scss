@@ -140,7 +140,7 @@ table.cart {
         }
 
         td.actions {
-            @media screen and (max-width: $tablet) {
+            @screen tablet{
                 @apply border-b-0;
             }
             .coupon {

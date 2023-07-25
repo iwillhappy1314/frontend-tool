@@ -1,4 +1,5 @@
-@media screen and (max-width: 1023px) {
+@screen desktop{
+
     .site__nav{
         @apply px-6 fixed top-0 bottom-0;
         padding-top: 100px;

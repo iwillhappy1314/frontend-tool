@@ -111,36 +111,6 @@ function RevealHeader() {
 
 /***/ }),
 
-/***/ "./assets/scripts/components/smart-menu.js":
-/*!*************************************************!*\
-  !*** ./assets/scripts/components/smart-menu.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ smartMenu)
-/* harmony export */ });
-/* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ "jquery");
-__webpack_require__(/*! smartmenus */ "./node_modules/.pnpm/smartmenus@1.1.1/node_modules/smartmenus/dist/jquery.smartmenus.js");
-
-function smartMenu() {
-  //@see https://www.smartmenus.org/docs/
-  jQuery('.sm, .product-categories').smartmenus({
-    showFunction: function showFunction($ul, complete) {
-      $ul.slideDown(100, complete);
-    },
-    hideFunction: function hideFunction($ul, complete) {
-      $ul.hide();
-    },
-    showTimeout: 0,
-    hideTimeout: 100
-  });
-}
-
-/***/ }),
-
 /***/ "./assets/scripts/components/sticky.js":
 /*!*********************************************!*\
   !*** ./assets/scripts/components/sticky.js ***!
@@ -181,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sticky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sticky */ "./assets/scripts/components/sticky.js");
 /* harmony import */ var _components_reveal_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/reveal-header */ "./assets/scripts/components/reveal-header.js");
 /* harmony import */ var _components_off_canvas_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/off-canvas-menu */ "./assets/scripts/components/off-canvas-menu.js");
-/* harmony import */ var _components_smart_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/smart-menu */ "./assets/scripts/components/smart-menu.js");
+/* harmony import */ var _modules_smart_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/smart-menu */ "./assets/scripts/modules/smart-menu.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 
 
@@ -206,6 +176,7 @@ var swiperEL = $('.rs-swiper');
 var wowEL = $('.wow');
 var scrollSpyEL = $('.rs-scroll-nav');
 var splideEL = document.querySelectorAll('.splide');
+var rspTabsEL = $('.rsp-tabs');
 
 if (dropdownEl.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
@@ -267,11 +238,49 @@ if (splideEL.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
 }
 
+if ($('.rsp-tabs').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'splide');
+}
+
+if ($('.rs-shuffle__container').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/shuffle.js'], 'splide');
+}
+
 (0,_components_footer_nav__WEBPACK_IMPORTED_MODULE_0__["default"])();
 (0,_components_sticky__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_components_reveal_header__WEBPACK_IMPORTED_MODULE_2__["default"])();
 (0,_components_off_canvas_menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_components_smart_menu__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_modules_smart_menu__WEBPACK_IMPORTED_MODULE_4__["default"])();
+
+/***/ }),
+
+/***/ "./assets/scripts/modules/smart-menu.js":
+/*!**********************************************!*\
+  !*** ./assets/scripts/modules/smart-menu.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ smartMenu)
+/* harmony export */ });
+/* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ "jquery");
+__webpack_require__(/*! smartmenus */ "./node_modules/.pnpm/smartmenus@1.1.1/node_modules/smartmenus/dist/jquery.smartmenus.js");
+
+function smartMenu() {
+  //@see https://www.smartmenus.org/docs/
+  jQuery('.sm, .product-categories').smartmenus({
+    showFunction: function showFunction($ul, complete) {
+      $ul.slideDown(100, complete);
+    },
+    hideFunction: function hideFunction($ul, complete) {
+      $ul.hide();
+    },
+    showTimeout: 0,
+    hideTimeout: 100
+  });
+}
 
 /***/ }),
 

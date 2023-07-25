@@ -236,7 +236,7 @@ div.woocommerce-MyAccount-navigation {
     border: 1px solid $border-color;
     background-color: $bg-color;
 
-    @media screen and (max-width: $tablet) {
+    @screen tablet{
         & + .woocommerce-Address {
             @apply mt-8;
         }
@@ -287,7 +287,7 @@ div.woocommerce-MyAccount-navigation {
         @apply mt-2;
     }
 
-    @media screen and (max-width: $tablet) {
+    @screen laptop{
         @apply flex items-center p-4;
         img {
             @apply m-0;

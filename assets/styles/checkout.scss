@@ -77,7 +77,7 @@
 // 结账审核订单表
 .woocommerce-checkout-review-order-table {
     @apply text-base w-full border-collapse;
-    @media screen and (max-width: $phone) {
+    @screen phone{
         &:not(.woocommerce-table--order-details) {
             @apply border-0;
         }

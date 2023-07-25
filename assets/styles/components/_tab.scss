@@ -35,7 +35,7 @@ $breakpoint-phone: 640px;
         margin-top: 0;
         margin-bottom: 0;
 
-        @media screen and (max-width: $breakpoint-phone) {
+        @screen tablet{
             flex-direction: column!important;
             flex: 1 auto;
         }

@@ -36,7 +36,7 @@ $primary-text: #262224;
 }
 
 // 桌面端
-@include above(992px) {
+@screen lg{
   :root {
     --menu-bg-color: transparent;
     --menu-text-color: var(--text-color);
@@ -58,7 +58,7 @@ $primary-text: #262224;
 }
 
 // 移动端
-@include below(992px) {
+@screen laptop{
   :root {
     --header-bg-color: var(--white);
     --menu-bg-color: var(--text-color);
