@@ -1,8 +1,8 @@
-import {isMobile} from 'is-mobile';
+import {isMobile} from './is-mobile';
 
 export default function footerNav() {
 
-    if (isMobile) {
+    if (isMobile()) {
         $('.footer-widget-area .widget-title').click(function() {
             $(this).next().slideToggle();
         });

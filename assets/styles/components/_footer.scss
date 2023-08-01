@@ -92,13 +92,20 @@
       border: 0;
     }
   }
-  .site-footer {
-    .widget {
-      & > div {
-        @apply hidden pb-4;
+
+  .site__footer{
+    .widget_nav_menu{
+      @apply border-b border-gray-400;
+      .widgettitle{
+        @apply w-full flex items-center justify-between pb-2;
+        &:after{
+          font-family: icomoon, sans-serif;
+          content: '\e9a4';
+        }
       }
     }
   }
+
   .widget-area.footer-widget-area {
     .widget {
       @apply border-b border-gray-300;
