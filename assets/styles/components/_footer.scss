@@ -34,7 +34,7 @@
     }
 
     h2{
-      @apply text-xl mb-3;
+      @apply text-xl;
     }
 
     li {
@@ -68,6 +68,7 @@
   .site-middle-footer-inner-wrap {
     padding-bottom: 0 !important;
   }
+
   .site-footer-middle-section-1 {
     @apply mb-4;
     .widget {
@@ -79,7 +80,7 @@
     .widget_nav_menu{
       @apply border-b border-gray-400;
       .widgettitle{
-        @apply w-full flex items-center justify-between pb-2;
+        @apply w-full flex items-center justify-between py-2;
         &:after{
           font-family: icomoon, sans-serif;
           content: '\e9a4';
