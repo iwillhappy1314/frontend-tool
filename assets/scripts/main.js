@@ -71,10 +71,6 @@ if (swiperEL.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'css/swiper.css', wenpriseSettings.staticPath + 'js/swiper.js'], 'swiper');
 }
 
-if (wowEL.length > 0) {
-    loadjs([wenpriseSettings.staticPath + 'js/wow.js'], 'wow');
-}
-
 if (scrollSpyEL.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/scrollspy.js'], 'scrollspy');
 }
