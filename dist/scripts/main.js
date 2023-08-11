@@ -257,10 +257,6 @@ if (swiperEL.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'css/swiper.css', wenpriseSettings.staticPath + 'js/swiper.js'], 'swiper');
 }
 
-if (wowEL.length > 0) {
-  loadjs([wenpriseSettings.staticPath + 'js/wow.js'], 'wow');
-}
-
 if (scrollSpyEL.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/scrollspy.js'], 'scrollspy');
 }
@@ -271,6 +267,10 @@ if (splideEL.length > 0) {
 
 if ($('.rsp-tabs').length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'rsp-tabs');
+}
+
+if ($('.rs-back-to-top').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/back-to-top.js'], 'back-to-top');
 }
 
 if ($('.rs-masonry').length > 0) {

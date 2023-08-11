@@ -69,6 +69,7 @@
     "/dist/styles/woocommerce.css": "/dist/styles/woocommerce.css",
     "/static/css/swiper.css": "/static/css/swiper.css",
     "/static/js/accordion.js": "/static/js/accordion.js",
+    "/static/js/back-to-top.js": "/static/js/back-to-top.js",
     "/static/js/bootstrap.js": "/static/js/bootstrap.js",
     "/static/js/dropdown.js": "/static/js/dropdown.js",
     "/static/js/easyResponsiveTabs.js": "/static/js/easyResponsiveTabs.js",

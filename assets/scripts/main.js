@@ -83,6 +83,10 @@ if ($('.rsp-tabs').length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'rsp-tabs');
 }
 
+if ($('.rs-back-to-top').length > 0) {
+    loadjs([wenpriseSettings.staticPath + 'js/back-to-top.js'], 'back-to-top');
+}
+
 if ($('.rs-masonry').length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/masonry.js'], 'masonry');
 }
