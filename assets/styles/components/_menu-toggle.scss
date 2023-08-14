@@ -1,4 +1,5 @@
 .menu-toggle {
+    --menu-text-color: var(--text-color);
     @apply mx-3 relative overflow-hidden;
     color: var(--menu-text-color);
 

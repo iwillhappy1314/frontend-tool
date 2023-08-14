@@ -104,10 +104,6 @@ body {
 
     a {
       @apply relative block leading-none;
-
-      @screen md {
-        @apply leading-none;
-      }
     }
 
   }

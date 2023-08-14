@@ -1,6 +1,31 @@
 // Generate rules to indent sub menus text
 //
 // We'll use left border to avoid messing with the padding.
+:root{
+    --menu-highlight-text-color: var(--primary-color);
+}
+
+// 移动端
+@screen laptop{
+    :root {
+        --menu-bg-color: var(--light-text-color);
+        --menu-text-color: var(--white);
+        --menu-border-color: rgba(0,0,0,.15);
+    }
+
+}
+
+@screen lg{
+    :root {
+        --menu-bg-color: transparent;
+        --menu-text-color: var(--text-color);
+    }
+
+    .sm-menu ul{
+        --menu-bg-color: var(--white);
+    }
+}
+
 
 @mixin sm-menu__sub-items-indentation($amount, $chainable: 'ul ', $level: 4, $chain: '') {
     @for $i from 1 through $level {
@@ -23,19 +48,13 @@
 // --menu-highlight-text-color: <?= get_option('_menu_highlighted_text_color'); ?>;
 // -----------------------------------------------------------------------------------------------------------------
 
-// ----------------------------------------------------------
-// :: 1.2. 自适应端点
-// ----------------------------------------------------------
-
-$sm-menu__desktop-vp: 1024px; // switch from collapsible to desktop
-
 
 // ----------------------------------------------------------
 // :: 1.3. 字体排版
 // ----------------------------------------------------------
 $sm-menu__font-family: $family-sans-serif;
 $sm-menu__font-size-base: 16px;
-$sm-menu__font-size-small: 16px;
+$sm-menu__font-size-small: 15px;
 $sm-menu__line-height: 17px;
 
 // ----------------------------------------------------------
@@ -66,15 +85,11 @@ $sm-menu__collapsible-separators-color: var(--menu-border-color);
 
 // Items
 $sm-menu__desktop-item-highlighted-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
-$sm-menu__desktop-item-disabled-color: #999;
-$sm-menu__desktop-item-padding-vertical: 11px;
-$sm-menu__desktop-item-padding-horizontal: 20px;
+$sm-menu__desktop-item-disabled-color: var(--lighter-text-color);
+$sm-menu__desktop-item-padding-vertical: 12px;
+$sm-menu__desktop-item-padding-horizontal: 12px;
 
 // 子菜单指示
-$sm-menu__desktop-arrow-size: 6px; // border-width
-$sm-menu__desktop-arrow-color: var(--menu-text-color);
-$sm-menu__desktop-arrow-hover-color: var(--menu-highlight-text-color);
-$sm-menu__desktop-arrow-spacing: 6px;
 
 // 垂直项目
 $sm-menu__desktop-vertical-item-padding-vertical: 10px;
@@ -136,26 +151,28 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
 
         // Toggle buttons (sub menu indicators)
         .sub-arrow {
-            position: absolute;
-            top: 50%;
-            margin-top: -(ceil($sm-menu__toggle-size / 2));
-            left: auto;
-            right: $sm-menu__toggle-spacing;
-            width: $sm-menu__toggle-size;
-            height: $sm-menu__toggle-size;
-            overflow: hidden;
-            font: bold #{$sm-menu__font-size-small}/#{$sm-menu__toggle-size} monospace !important;
-            text-align: center;
-            text-shadow: none;
-            border-radius: $sm-menu__border-radius-base;
+            @screen laptop{
+                position: absolute;
+                top: 50%;
+                margin-top: -(ceil($sm-menu__toggle-size / 2));
+                left: auto;
+                text-align: center;
+                right: $sm-menu__toggle-spacing;
+                width: $sm-menu__toggle-size;
+                height: $sm-menu__toggle-size;
+                line-height: $sm-menu__toggle-size;
+            }
         }
 
         .sub-arrow::before {
-            content: '+';
+            font-family: icomoon, sans-serif;
+            content: '\e9a7';
         }
 
-        &.highlighted .sub-arrow::before {
-            content: '-';
+        @screen laptop{
+            &.highlighted .sub-arrow::before {
+                content: '\e9a4';
+            }
         }
     }
 
@@ -179,7 +196,9 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
         &.current-menu-item {
             & > a {
                 .sub-arrow {
-                    border-color: var(--menu-highlight-text-color) transparent transparent transparent;
+                    &:before{
+                        color: var(--menu-highlight-text-color);
+                    }
                 }
             }
         }
@@ -252,15 +271,6 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
         position: absolute;
         width: 12em;
     }
-    .sm-menu li {
-        float: left;
-    }
-    .sm-menu.sm-rtl li {
-        float: right;
-    }
-    .sm-menu ul li, .sm-menu.sm-rtl ul li, .sm-menu.sm-vertical li {
-        float: none;
-    }
     .sm-menu a {
         white-space: nowrap;
     }
@@ -276,7 +286,7 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
     .sm-menu {
         border-top: 0;
 
-        // Main menu items
+        // 一级菜单项目
         a {
             &,
             &:hover,
@@ -305,42 +315,14 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
                 box-shadow: none;
             }
 
-            // Make room for the sub arrows
-            &.has-submenu {
-                padding-right: $sm-menu__desktop-item-padding-horizontal + 8px + $sm-menu__desktop-arrow-spacing;
+            .sub-arrow{
+                margin-left: 6px;
             }
 
-            // Sub menu indicators
-            .sub-arrow {
-                top: 50%;
-                margin-top: -(ceil($sm-menu__desktop-arrow-size / 2));
-                right: $sm-menu__desktop-item-padding-horizontal;
-                width: 0;
-                height: 0;
-                border-width: $sm-menu__desktop-arrow-size ($sm-menu__desktop-arrow-size * 0.67) 0 ($sm-menu__desktop-arrow-size * 0.67);
-                border-style: solid dashed dashed dashed;
-                border-color: $sm-menu__desktop-arrow-color transparent transparent transparent;
-                background: transparent;
-                border-radius: 0;
-            }
-
-            &:hover .sub-arrow,
-            &:focus .sub-arrow,
-            &:active .sub-arrow {
-                border-color: var(--menu-highlight-text-color) transparent transparent transparent;
-            }
-
-            &.highlighted .sub-arrow {
-                border-color: var(--menu-highlight-text-color) transparent transparent transparent;
-            }
-
-            &.disabled .sub-arrow {
-                border-color: $sm-menu__desktop-arrow-color transparent transparent transparent;
-            }
-
-            // reset mobile first style
+            // 有子菜单指示，向下箭头
             .sub-arrow::before {
-                display: none;
+                font-family: icomoon, sans-serif;
+                content: '\e9a4';
             }
         }
 
@@ -349,7 +331,7 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
             border-top: 0;
         }
 
-        // 子菜单盒子
+        // 二级子菜单盒子
         ul {
             border: 0;
             padding: 8px 0;
@@ -393,29 +375,10 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
                     color: rgba(var(--menu-text-color), 0.75);
                 }
 
-                // No need for additional room for the sub arrows
-                &.has-submenu {
-                    padding-right: $sm-menu__desktop-item-padding-horizontal;
-                }
-
-                // 子菜单箭头
-                .sub-arrow {
-                    right: 10px;
-                    margin-top: -($sm-menu__desktop-arrow-size * 0.67);
-                    border-width: ($sm-menu__desktop-arrow-size * 0.67) 0 ($sm-menu__desktop-arrow-size * 0.67) $sm-menu__desktop-arrow-size;
-                    border-style: dashed dashed dashed solid;
-                    border-color: transparent transparent transparent $sm-menu__desktop-arrow-color;
-                }
-
-                &:hover .sub-arrow,
-                &:focus .sub-arrow,
-                &:active .sub-arrow,
-                &.highlighted .sub-arrow {
-                    border-color: transparent transparent transparent $sm-menu__desktop-arrow-hover-color;
-                }
-
-                &.disabled .sub-arrow {
-                    border-color: transparent transparent transparent $sm-menu__desktop-arrow-color;
+                // 二级子菜单指示，向右箭头
+                .sub-arrow::before {
+                    font-family: icomoon, sans-serif;
+                    content: '\e9a7';
                 }
             }
         }
@@ -438,25 +401,20 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
             top: 6px;
             left: 50%;
             margin-left: -8px;
-            // we will use one-side border to create a triangle so that we don't use a real background image, of course, you can use a real image if you like too
-            width: 0;
-            height: 0;
-            overflow: hidden;
-            border-width: 0 6px 8px 6px; // tweak size of the arrow
-            border-style: dashed dashed solid dashed;
-            border-color: transparent transparent $sm-menu__desktop-arrow-color transparent;
+            &:after{
+                content: '\e9a4';
+                font-family: icomoon, sans-serif;
+            }
         }
 
         .scroll-down-arrow {
-            border-width: 8px 6px 0 6px;
-            border-style: solid dashed dashed dashed;
-            border-color: $sm-menu__desktop-arrow-color transparent transparent transparent;
+            &:after{
+                content: '\e9a4';
+            }
         }
 
 
-        // 从右向左
-
-        // Main menu box
+        // 从右向左菜单
         &.sm-rtl {
 
             // Main menu items
@@ -465,17 +423,21 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
                 // Make room for the sub arrows
                 &.has-submenu {
                     padding-right: $sm-menu__desktop-item-padding-horizontal;
-                    padding-left: $sm-menu__desktop-item-padding-horizontal + 8px + $sm-menu__desktop-arrow-spacing;
+                    padding-left: $sm-menu__desktop-item-padding-horizontal;
+                }
+
+                .sub-arrow{
+                    margin-right: 6px;
                 }
 
                 // Sub menu indicators
-                .sub-arrow {
-                    right: auto;
-                    left: $sm-menu__desktop-item-padding-horizontal;
+                .sub-arrow::before {
+                    font-family: icomoon, sans-serif;
+                    content: '\e9a6';
                 }
             }
 
-            // Vertical main menu
+            // 从右向左垂直菜单
             &.sm-vertical {
                 border-right: 0;
                 border-left: $sm-menu__border-width solid $sm-menu__collapsible-border-color;
@@ -489,29 +451,15 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
                         padding: $sm-menu__desktop-vertical-item-padding-vertical $sm-menu__desktop-vertical-item-padding-horizontal;
                     }
 
-                    // Sub menu indicators
-                    .sub-arrow {
-                        right: auto;
-                        left: 10px;
-                        border-width: ($sm-menu__desktop-arrow-size * 0.67) $sm-menu__desktop-arrow-size ($sm-menu__desktop-arrow-size * 0.67) 0;
-                        border-style: dashed solid dashed dashed;
-                        border-color: transparent $sm-menu__desktop-arrow-color transparent transparent;
-                    }
-
-                    &:hover .sub-arrow,
-                    &:focus .sub-arrow,
-                    &:active .sub-arrow,
-                    &.highlighted .sub-arrow {
-                        border-color: transparent $sm-menu__desktop-arrow-hover-color transparent transparent;
-                    }
-
-                    &.disabled .sub-arrow {
-                        border-color: transparent $sm-menu__desktop-arrow-color transparent transparent;
+                    // 从右向左子菜单指示，向左箭头
+                    .sub-arrow::before {
+                        font-family: icomoon, sans-serif;
+                        content: '\e9a6';
                     }
                 }
             }
 
-            // Sub menus box
+            // 垂直菜单子菜单
             ul {
                 border-radius: $sm-menu__border-radius-base 0 $sm-menu__border-radius-base $sm-menu__border-radius-base;
 
@@ -523,24 +471,10 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
                         padding: $sm-menu__desktop-sub-item-padding-vertical $sm-menu__desktop-sub-item-padding-horizontal !important;
                     }
 
-                    // Sub menu indicators
-                    .sub-arrow {
-                        right: auto;
-                        left: 10px;
-                        border-width: ($sm-menu__desktop-arrow-size * 0.67) $sm-menu__desktop-arrow-size ($sm-menu__desktop-arrow-size * 0.67) 0;
-                        border-style: dashed solid dashed dashed;
-                        border-color: transparent $sm-menu__desktop-arrow-color transparent transparent;
-                    }
-
-                    &:hover .sub-arrow,
-                    &:focus .sub-arrow,
-                    &:active .sub-arrow,
-                    &.highlighted .sub-arrow {
-                        border-color: transparent $sm-menu__desktop-arrow-hover-color transparent transparent;
-                    }
-
-                    &.disabled .sub-arrow {
-                        border-color: transparent $sm-menu__desktop-arrow-color transparent transparent;
+                    // 子菜单指示，向左箭头
+                    .sub-arrow::before {
+                        font-family: icomoon, sans-serif;
+                        content: '\e9a6';
                     }
                 }
             }
@@ -548,8 +482,6 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
 
 
         // 垂直子菜单
-
-        // Main menu box
         &.sm-vertical {
             border-bottom: 0;
             border: $sm-menu__border-width solid $sm-menu__collapsible-border-color;
@@ -575,24 +507,14 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
                     color: $sm-menu__desktop-item-disabled-color;
                 }
 
-                // Sub menu indicators
-                .sub-arrow {
-                    right: 10px;
-                    margin-top: -($sm-menu__desktop-arrow-size * 0.67);
-                    border-width: ($sm-menu__desktop-arrow-size * 0.67) 0 ($sm-menu__desktop-arrow-size * 0.67) $sm-menu__desktop-arrow-size;
-                    border-style: dashed dashed dashed solid;
-                    border-color: transparent transparent transparent $sm-menu__desktop-arrow-color;
+                .sub-arrow{
+                    margin-left: 6px;
                 }
 
-                &:hover .sub-arrow,
-                &:focus .sub-arrow,
-                &:active .sub-arrow,
-                &.highlighted .sub-arrow {
-                    border-color: transparent transparent transparent $sm-menu__desktop-arrow-hover-color;
-                }
-
-                &.disabled .sub-arrow {
-                    border-color: transparent transparent transparent $sm-menu__desktop-arrow-color;
+                // 垂直子菜单指示，向右箭头
+                .sub-arrow::before {
+                    font-family: icomoon, sans-serif;
+                    content: '\e9a7';
                 }
             }
 

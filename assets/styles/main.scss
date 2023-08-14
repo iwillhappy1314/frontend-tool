@@ -31,29 +31,10 @@
 $primary: #c90815;
 $primary-text: #262224;
 
-:root{
-  --menu-highlight-text-color: var(--primary-color);
-}
-
 // 桌面端
 @screen lg{
   :root {
-    --menu-bg-color: transparent;
-    --menu-text-color: var(--text-color);
     --header-bg-color: var(--white);
-  }
-
-  .sm-menu ul{
-    --menu-bg-color: var(--white);
-  }
-
-  .sub-arrow {
-    display: none;
-  }
-
-  .sm-menu a.has-submenu {
-    padding-left: 12px;
-    padding-right: 12px;
   }
 }
 
@@ -61,16 +42,8 @@ $primary-text: #262224;
 @screen laptop{
   :root {
     --header-bg-color: var(--white);
-    --menu-bg-color: var(--text-color);
-    --menu-text-color: var(--white);
-    --menu-border-color: #222;
-
     --global-content-edge-padding: 24px;
   }
-}
-
-.menu-toggle {
-  --menu-text-color: var(--text-color);
 }
 
 .woocommerce-product-search {
