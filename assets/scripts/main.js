@@ -5,7 +5,7 @@ var loadjs = require('loadjs');
 import footerNav from './components/footer-nav';
 import stickyNav from './components/sticky';
 import RevealHeader from './components/reveal-header';
-import menuToggle from './components/off-canvas-menu';
+import menuToggle from './components/menu-toggle';
 import smartMenu from './modules/smart-menu';
 
 const dropdownEl = document.querySelectorAll('.rs-dropdown-toggle');
@@ -87,6 +87,10 @@ if ($('.rs-back-to-top').length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/back-to-top.js'], 'back-to-top');
 }
 
+if ($('.rs-off-canvas-toggle').length > 0) {
+    loadjs([wenpriseSettings.staticPath + 'js/off-canvas.js'], 'off-canvas');
+}
+
 if ($('.rs-masonry').length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/masonry.js'], 'masonry');
 }
@@ -97,6 +101,6 @@ if ($('.rs-shuffle__container').length > 0) {
 
 footerNav();
 stickyNav();
-RevealHeader();
 menuToggle();
+RevealHeader();
 smartMenu();

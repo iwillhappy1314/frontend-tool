@@ -54,10 +54,10 @@ function isTableMobile() {
 
 /***/ }),
 
-/***/ "./assets/scripts/components/off-canvas-menu.js":
-/*!******************************************************!*\
-  !*** ./assets/scripts/components/off-canvas-menu.js ***!
-  \******************************************************/
+/***/ "./assets/scripts/components/menu-toggle.js":
+/*!**************************************************!*\
+  !*** ./assets/scripts/components/menu-toggle.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -67,30 +67,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 function menuToggle() {
-  $('body').append('<div class="f-body-cover hidden" />');
-  $('.menu-toggle').click(function () {
+  $('.rs-dropdown-toggle').click(function () {
     $('body').toggleClass('f-menu-toggled');
     $('.f-body-cover').toggleClass('hidden');
     $('#site-navigation').toggleClass('is-toggled');
     $(this).toggleClass('is-toggled');
-  });
-
-  /**
-   * 移动端 Accordion 效果
-   */
-  $('#f-mobile-menu > ul > li > a').click(function () {
-    var checkElement = $(this).next();
-    $('#f-mobile-menu li').removeClass('active');
-    $(this).closest('li').addClass('active');
-    if (checkElement.is('ul') && checkElement.is(':visible')) {
-      $(this).closest('li').removeClass('active');
-      checkElement.slideUp('fast');
-    }
-    if (checkElement.is('ul') && !checkElement.is(':visible')) {
-      $('#f-mobile-menu ul ul:visible').slideUp('fast');
-      checkElement.slideDown('fast');
-    }
-    return !checkElement.is('ul');
   });
 }
 
@@ -172,7 +153,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_footer_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/footer-nav */ "./assets/scripts/components/footer-nav.js");
 /* harmony import */ var _components_sticky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sticky */ "./assets/scripts/components/sticky.js");
 /* harmony import */ var _components_reveal_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/reveal-header */ "./assets/scripts/components/reveal-header.js");
-/* harmony import */ var _components_off_canvas_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/off-canvas-menu */ "./assets/scripts/components/off-canvas-menu.js");
+/* harmony import */ var _components_menu_toggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu-toggle */ "./assets/scripts/components/menu-toggle.js");
 /* harmony import */ var _modules_smart_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/smart-menu */ "./assets/scripts/modules/smart-menu.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 
@@ -245,6 +226,9 @@ if ($('.rsp-tabs').length > 0) {
 if ($('.rs-back-to-top').length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/back-to-top.js'], 'back-to-top');
 }
+if ($('.rs-off-canvas-toggle').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/off-canvas.js'], 'off-canvas');
+}
 if ($('.rs-masonry').length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/masonry.js'], 'masonry');
 }
@@ -253,8 +237,8 @@ if ($('.rs-shuffle__container').length > 0) {
 }
 (0,_components_footer_nav__WEBPACK_IMPORTED_MODULE_0__["default"])();
 (0,_components_sticky__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_components_menu_toggle__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_components_reveal_header__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_components_off_canvas_menu__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_modules_smart_menu__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
 /***/ }),

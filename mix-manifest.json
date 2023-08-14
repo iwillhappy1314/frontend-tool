@@ -88,6 +88,7 @@
     "/static/js/micro-modal.js": "/static/js/micro-modal.js",
     "/static/js/nav-tree.js": "/static/js/nav-tree.js",
     "/static/js/navigation.js": "/static/js/navigation.js",
+    "/static/js/off-canvas.js": "/static/js/off-canvas.js",
     "/static/js/popover.js": "/static/js/popover.js",
     "/static/js/quantity.js": "/static/js/quantity.js",
     "/static/js/response-tabs.js": "/static/js/response-tabs.js",

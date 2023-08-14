@@ -59,6 +59,7 @@ mix.js('assets/scripts/modules/bootstrap.js', 'static/js').
     js('assets/scripts/modules/response-tabs.js', 'static/js').
     js('assets/scripts/modules/smart-tab.js', 'static/js').
     js('assets/scripts/modules/back-to-top.js', 'static/js').
+    js('assets/scripts/modules/off-canvas/off-canvas.js', 'static/js').
     js('assets/scripts/modules/micro-modal/micro-modal.js', 'static/js').
     js('assets/scripts/modules/infinite-scroll.js', 'static/js').
     js('assets/scripts/modules/isotope.js', 'static/js').
