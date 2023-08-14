@@ -20,7 +20,7 @@ textarea {
     &:active {
         @apply outline-none;
         border-color: var(--primary-color);
-        box-shadow: 0 0 0 0.125em rgba(50, 115, 220, .25);
+        box-shadow: 0 0 0 0.125em rgba($primary, 0.2);
     }
 
     &[disabled] {
