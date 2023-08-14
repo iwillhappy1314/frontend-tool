@@ -33,6 +33,7 @@ module.exports = {
     '../single-member.php',
     '../single-business.php',
     '../single-company.php',
+    '../../../plugins/wenprise-content-components/templates/**/*.php',
     '../404.php',
   ],
   safelist   : purgecssWhiteList.whitelist.concat([
