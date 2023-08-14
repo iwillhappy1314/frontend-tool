@@ -23,13 +23,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 var initPhotoSwipeWithSwiper = function initPhotoSwipeWithSwiper(gallerySelector, swiper, galleryOptions, events, cb) {
   if (!$('.pswp').length) {
     $('body').append("<!-- PhotoSwipe Template -->\n<div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n  <div class=\"pswp__bg\"></div>\n  <div class=\"pswp__scroll-wrap\">\n    <div class=\"pswp__container\">\n      <div class=\"pswp__item\"></div>\n      <div class=\"pswp__item\"></div>\n      <div class=\"pswp__item\"></div>\n    </div>\n    <div class=\"pswp__ui pswp__ui--hidden\">\n      <div class=\"pswp__top-bar\">\n        <div class=\"pswp__counter\"></div>\n        <button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button>\n        <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button>\n        <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button>\n        <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button>\n        <div class=\"pswp__preloader\">\n          <div class=\"pswp__preloader__icn\">\n            <div class=\"pswp__preloader__cut\">\n              <div class=\"pswp__preloader__donut\"></div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">\n        <div class=\"pswp__share-tooltip\"></div>\n      </div>\n      <button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button>\n      <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button>\n      <div class=\"pswp__caption\">\n        <div class=\"pswp__caption__center\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n<!-- / PhotoSwipe Template -->");
-  } // parse slide data (url, title, size ...) from DOM elements
+  }
 
-
+  // parse slide data (url, title, size ...) from DOM elements
   function getItems() {
     var items = [];
     $(gallerySelector).find('figure:not(.swiper-slide-duplicate) a').each(function () {
@@ -44,26 +43,21 @@ var initPhotoSwipeWithSwiper = function initPhotoSwipeWithSwiper(gallerySelector
       if ($img.length > 0) item.msrc = $img[0].getAttribute('src');
       if (title) item.title = title;
       item.el = $(this).parents('figure')[0]; // save link to element for getThumbBoundsFn
-
       items.push(item);
     });
     return items;
   }
-
   function getClickedItem(target) {
     return target.tagName.toUpperCase() === 'FIGURE' ? target : $(target).parents('figure')[0];
   }
-
   function getClickedItemIndex(clickedListItem) {
     if (!clickedListItem) return null;
-
     if ($(gallerySelector).find('.swiper-slide-duplicate').length) {
       return parseInt($(clickedListItem).attr('data-swiper-slide-index'));
     } else {
       return $(clickedListItem).index();
     }
   }
-
   $(gallerySelector).on('click', 'figure a', function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -89,25 +83,21 @@ var initPhotoSwipeWithSwiper = function initPhotoSwipeWithSwiper(gallerySelector
     gallery.listen('afterChange', function () {
       var index = gallery.getCurrentIndex();
       item = gallery.items[index].el;
-
       if ($(gallerySelector).find('.swiper-slide-duplicate').length) {
         swiper.slideToLoop(index, 0, false);
       } else {
         swiper.slideTo(index, 0, false);
       }
     });
-
     if (events) {
       Object.keys(events).forEach(function (key) {
         gallery.listen(key, events[key].bind(gallery));
       });
     }
-
     if (cb) cb.call(gallery);
     return false;
   });
 };
-
 
 
 /***/ }),
@@ -18405,11 +18395,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ini_photoswipe__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ini-photoswipe */ "./assets/scripts/modules/swiper/ini-photoswipe.js");
 /* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ "jquery");
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 
 
 jQuery(document).ready(function ($) {
@@ -18441,30 +18428,26 @@ jQuery(document).ready(function ($) {
   swiper.on('slideChangeTransitionEnd', function () {
     $('.rs-swiper-container').find('.slider-wrapper').show();
   });
+
   /**
    * 绑定两个Swiper实例
    * @param swiperList
    */
-
   function bindSwipers() {
     for (var _len = arguments.length, swiperList = new Array(_len), _key = 0; _key < _len; _key++) {
       swiperList[_key] = arguments[_key];
     }
-
     for (var _i = 0, _swiperList = swiperList; _i < _swiperList.length; _i++) {
       var _swiper = _swiperList[_i];
-
       _swiper.slideTo = function (index, speed, runCallbacks, doNotPropagate) {
         if (doNotPropagate) {
           swiper__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.slideTo.apply(this, arguments);
         } else {
           var _iterator = _createForOfIteratorHelper(swiperList),
-              _step;
-
+            _step;
           try {
             for (_iterator.s(); !(_step = _iterator.n()).done;) {
               var _swiper2 = _step.value;
-
               _swiper2.slideTo(index, speed, runCallbacks, true);
             }
           } catch (err) {
@@ -18476,12 +18459,11 @@ jQuery(document).ready(function ($) {
       };
     }
   }
+
   /**
    * Product gallery with PhotoSwipe
    * @type {Swiper}
    */
-
-
   var galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.rs-gallery-top', {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller],
     slidesPerView: 1,

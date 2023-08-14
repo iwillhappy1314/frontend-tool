@@ -372,7 +372,6 @@ var __webpack_exports__ = {};
   \***************************************************/
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 var loadjs = __webpack_require__(/*! loadjs */ "./node_modules/.pnpm/loadjs@4.2.0/node_modules/loadjs/dist/loadjs.umd.js");
-
 loadjs([wenpriseSettings.staticPath + 'js/imagesloaded.pkgd.min.js'], 'imagesloaded');
 loadjs.ready('imagesloaded', function () {
   var $container = $('.rsis-container').infiniteScroll({
@@ -380,21 +379,21 @@ loadjs.ready('imagesloaded', function () {
     // enable button
     button: '.view-more-button'
   });
-  var $viewMoreButton = $('.rsis-view-more-button'); // get Infinite Scroll instance
+  var $viewMoreButton = $('.rsis-view-more-button');
 
+  // get Infinite Scroll instance
   var infScroll = $container.data('infiniteScroll');
   $container.on('load.infiniteScroll', onPageLoad);
-
   function onPageLoad() {
     if (infScroll.loadCount == 1) {
       // after 2nd page loaded
       // disable loading on scroll
       $container.infiniteScroll('option', {
         loadOnScroll: false
-      }); // show button
-
-      $viewMoreButton.show(); // remove event listener
-
+      });
+      // show button
+      $viewMoreButton.show();
+      // remove event listener
       $container.off('load.infiniteScroll', onPageLoad);
     }
   }

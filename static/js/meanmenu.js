@@ -552,7 +552,6 @@ __webpack_require__.r(__webpack_exports__);
 * @Copyright (C) 2012-2014 Chris Wharton @ MeanThemes (https://github.com/meanthemes/meanMenu)
 *
 */
-
 /*
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -616,10 +615,11 @@ __webpack_require__.r(__webpack_exports__);
       meanDisplay: 'block',
       // override display method for table cell based layouts e.g. table-cell
       removeElements: '' // set to hide page elements
-
     };
-    options = $.extend(defaults, options); // get browser width
 
+    options = $.extend(defaults, options);
+
+    // get browser width
     var currentWidth = window.innerWidth || document.documentElement.clientWidth;
     return this.each(function () {
       var meanMenu = options.meanMenuTarget;
@@ -640,27 +640,23 @@ __webpack_require__.r(__webpack_exports__);
       var meanRemoveAttrs = options.meanRemoveAttrs;
       var onePage = options.onePage;
       var meanDisplay = options.meanDisplay;
-      var removeElements = options.removeElements; //detect known mobile/tablet usage
+      var removeElements = options.removeElements;
 
+      //detect known mobile/tablet usage
       var isMobile = false;
-
       if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/Windows Phone/i)) {
         isMobile = true;
       }
-
       if (navigator.userAgent.match(/MSIE 8/i) || navigator.userAgent.match(/MSIE 7/i)) {
         // add scrollbar for IE7 & 8 to stop breaking resize function on small content sites
         jQuery('html').css('overflow-y', 'scroll');
       }
-
       var meanRevealPos = '';
-
       var meanCentered = function meanCentered() {
         if (meanRevealPosition === 'center') {
           var newWidth = window.innerWidth || document.documentElement.clientWidth;
           var meanCenter = newWidth / 2 - 22 + 'px';
           meanRevealPos = 'left:' + meanCenter + ';right:auto;';
-
           if (!isMobile) {
             jQuery('.meanmenu-reveal').css('left', meanCenter);
           } else {
@@ -670,23 +666,19 @@ __webpack_require__.r(__webpack_exports__);
           }
         }
       };
-
       var menuOn = false;
       var meanMenuExist = false;
-
       if (meanRevealPosition === 'right') {
         meanRevealPos = 'right:' + meanRevealPositionDistance + ';left:auto;';
       }
-
       if (meanRevealPosition === 'left') {
         meanRevealPos = 'left:' + meanRevealPositionDistance + ';right:auto;';
-      } // run center function
+      }
+      // run center function
+      meanCentered();
 
-
-      meanCentered(); // set all styles for mean-reveal
-
+      // set all styles for mean-reveal
       var $navreveal = '';
-
       var meanInner = function meanInner() {
         // get last class name
         if (jQuery($navreveal).is('.meanmenu-reveal.meanclose')) {
@@ -694,9 +686,9 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           $navreveal.html(meanMenuOpen);
         }
-      }; // re-instate original nav (and call this on window.width functions)
+      };
 
-
+      // re-instate original nav (and call this on window.width functions)
       var meanOriginal = function meanOriginal() {
         jQuery('.mean-bar,.mean-push').remove();
         jQuery(meanContainer).removeClass('mean-container');
@@ -704,22 +696,23 @@ __webpack_require__.r(__webpack_exports__);
         menuOn = false;
         meanMenuExist = false;
         jQuery(removeElements).removeClass('mean-remove');
-      }; // navigation reveal
+      };
 
-
+      // navigation reveal
       var showMeanMenu = function showMeanMenu() {
         var meanStyles = 'background:' + meanRevealColour + ';color:' + meanRevealColour + ';' + meanRevealPos;
-
         if (currentWidth <= meanScreenWidth) {
           jQuery(removeElements).addClass('mean-remove');
-          meanMenuExist = true; // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
-
+          meanMenuExist = true;
+          // add class to body so we don't need to worry about media queries here, all CSS is wrapped in '.mean-container'
           jQuery(meanContainer).addClass('mean-container');
-          jQuery('.mean-container').prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="' + meanStyles + '">Show Navigation</a><nav class="mean-nav"></nav></div>'); //push meanMenu navigation into .mean-nav
+          jQuery('.mean-container').prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="' + meanStyles + '">Show Navigation</a><nav class="mean-nav"></nav></div>');
 
+          //push meanMenu navigation into .mean-nav
           var meanMenuContents = jQuery(meanMenu).html();
-          jQuery('.mean-nav').html(meanMenuContents); // remove all classes from EVERYTHING inside meanmenu nav
+          jQuery('.mean-nav').html(meanMenuContents);
 
+          // remove all classes from EVERYTHING inside meanmenu nav
           if (meanRemoveAttrs) {
             jQuery('nav.mean-nav ul, nav.mean-nav ul *').each(function () {
               // First check if this has mean-remove class
@@ -728,23 +721,26 @@ __webpack_require__.r(__webpack_exports__);
               } else {
                 jQuery(this).removeAttr('class');
               }
-
               jQuery(this).removeAttr('id');
             });
-          } // push in a holder div (this can be used if removal of nav is causing layout issues)
+          }
 
-
+          // push in a holder div (this can be used if removal of nav is causing layout issues)
           jQuery(meanMenu).before('<div class="mean-push" />');
-          jQuery('.mean-push').css('margin-top', meanNavPush); // hide current navigation and reveal mean nav link
+          jQuery('.mean-push').css('margin-top', meanNavPush);
 
+          // hide current navigation and reveal mean nav link
           jQuery(meanMenu).hide();
-          jQuery('.meanmenu-reveal').show(); // turn 'X' on or off
+          jQuery('.meanmenu-reveal').show();
 
+          // turn 'X' on or off
           jQuery(meanRevealClass).html(meanMenuOpen);
-          $navreveal = jQuery(meanRevealClass); //hide mean-nav ul
+          $navreveal = jQuery(meanRevealClass);
 
-          jQuery('.mean-nav ul').hide(); // hide sub nav
+          //hide mean-nav ul
+          jQuery('.mean-nav ul').hide();
 
+          // hide sub nav
           if (meanShowChildren) {
             // allow expandable sub nav(s)
             if (meanExpandableChildren) {
@@ -755,7 +751,6 @@ __webpack_require__.r(__webpack_exports__);
               });
               jQuery('.mean-expand').on('click', function (e) {
                 e.preventDefault();
-
                 if (jQuery(this).hasClass('mean-clicked')) {
                   jQuery(this).text(meanExpand);
                   jQuery(this).prev('ul').slideUp(300, function () {});
@@ -763,7 +758,6 @@ __webpack_require__.r(__webpack_exports__);
                   jQuery(this).text(meanContract);
                   jQuery(this).prev('ul').slideDown(300, function () {});
                 }
-
                 jQuery(this).toggleClass('mean-clicked');
               });
             } else {
@@ -771,14 +765,13 @@ __webpack_require__.r(__webpack_exports__);
             }
           } else {
             jQuery('.mean-nav ul ul').hide();
-          } // add last class to tidy up borders
+          }
 
-
+          // add last class to tidy up borders
           jQuery('.mean-nav ul li').last().addClass('mean-last');
           $navreveal.removeClass('meanclose');
           jQuery($navreveal).click(function (e) {
             e.preventDefault();
-
             if (menuOn === false) {
               $navreveal.css('text-align', 'center');
               $navreveal.css('text-indent', '0');
@@ -789,12 +782,12 @@ __webpack_require__.r(__webpack_exports__);
               jQuery('.mean-nav ul:first').slideUp();
               menuOn = false;
             }
-
             $navreveal.toggleClass('meanclose');
             meanInner();
             jQuery(removeElements).addClass('mean-remove');
-          }); // for one page websites, reset all variables...
+          });
 
+          // for one page websites, reset all variables...
           if (onePage) {
             jQuery('.mean-nav ul > li > a:first-child').on('click', function () {
               jQuery('.mean-nav ul:first').slideUp();
@@ -806,18 +799,15 @@ __webpack_require__.r(__webpack_exports__);
           meanOriginal();
         }
       };
-
       if (!isMobile) {
         // reset menu on resize above meanScreenWidth
         jQuery(window).resize(function () {
           currentWidth = window.innerWidth || document.documentElement.clientWidth;
-
           if (currentWidth > meanScreenWidth) {
             meanOriginal();
           } else {
             meanOriginal();
           }
-
           if (currentWidth <= meanScreenWidth) {
             showMeanMenu();
             meanCentered();
@@ -826,21 +816,17 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       }
-
       jQuery(window).resize(function () {
         // get browser width
         currentWidth = window.innerWidth || document.documentElement.clientWidth;
-
         if (!isMobile) {
           meanOriginal();
-
           if (currentWidth <= meanScreenWidth) {
             showMeanMenu();
             meanCentered();
           }
         } else {
           meanCentered();
-
           if (currentWidth <= meanScreenWidth) {
             if (meanMenuExist === false) {
               showMeanMenu();
@@ -849,13 +835,13 @@ __webpack_require__.r(__webpack_exports__);
             meanOriginal();
           }
         }
-      }); // run main menuMenu function on load
+      });
 
+      // run main menuMenu function on load
       showMeanMenu();
     });
   };
 })(jQuery);
-
 jQuery(document).ready(function ($) {
   $('.rs-mean-menu').meanmenu({
     meanMenuOpen: '<span class="icon-bars2"></span>',

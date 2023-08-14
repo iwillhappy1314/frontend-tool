@@ -104,7 +104,6 @@ var __webpack_exports__ = {};
   \**************************************************/
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 __webpack_require__(/*! script-loader!theia-sticky-sidebar */ "./node_modules/.pnpm/script-loader@0.7.2/node_modules/script-loader/index.js!./node_modules/.pnpm/theia-sticky-sidebar@1.7.0/node_modules/theia-sticky-sidebar/dist/theia-sticky-sidebar.js");
-
 if ($(document).width() > 1024) {
   $('.rs-sticky-left, .rs-sticky-right').theiaStickySidebar({
     additionalMarginTop: 32

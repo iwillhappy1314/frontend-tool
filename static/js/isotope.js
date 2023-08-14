@@ -372,7 +372,6 @@ var __webpack_exports__ = {};
   \*******************************************/
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 var loadjs = __webpack_require__(/*! loadjs */ "./node_modules/.pnpm/loadjs@4.2.0/node_modules/loadjs/dist/loadjs.umd.js");
-
 loadjs([wenpriseSettings.staticPath + 'js/imagesloaded.pkgd.min.js', wenpriseSettings.staticPath + 'js/isotope.pkgd.min.js'], 'imagesloaded-isotope');
 loadjs.ready('imagesloaded-isotope', function () {
   $('.rs-isotope__container').imagesLoaded(function () {

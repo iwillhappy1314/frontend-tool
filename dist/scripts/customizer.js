@@ -53,6 +53,7 @@ var __webpack_exports__ = {};
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
+
 (function ($) {
   // Site title and description.
   wp.customize('blogname', function (value) {
@@ -64,8 +65,9 @@ var __webpack_exports__ = {};
     value.bind(function (to) {
       $('.site-description').text(to);
     });
-  }); // Header text color.
+  });
 
+  // Header text color.
   wp.customize('header_textcolor', function (value) {
     value.bind(function (to) {
       if ('blank' === to) {

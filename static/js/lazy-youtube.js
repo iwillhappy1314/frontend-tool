@@ -551,6 +551,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /*!
 * lazyYT (lazy load YouTube videos)
 * v1.0.1 - 2014-12-30
@@ -562,23 +563,23 @@ __webpack_require__.r(__webpack_exports__);
 */
 
 ;
-
 (function ($) {
   'use strict';
 
   function setUp($el, settings) {
     var width = $el.data('width'),
-        height = $el.data('height'),
-        ratio = $el.data('ratio') ? $el.data('ratio') : settings.default_ratio,
-        id = $el.data('youtube-id'),
-        padding_bottom,
-        innerHtml = [],
-        $thumb,
-        thumb_img,
-        loading_text = $el.text() ? $el.text() : settings.loading_text,
-        youtube_parameters = $el.data('parameters') || '';
-    ratio = ratio.split(':'); // width and height might override default_ratio value
+      height = $el.data('height'),
+      ratio = $el.data('ratio') ? $el.data('ratio') : settings.default_ratio,
+      id = $el.data('youtube-id'),
+      padding_bottom,
+      innerHtml = [],
+      $thumb,
+      thumb_img,
+      loading_text = $el.text() ? $el.text() : settings.loading_text,
+      youtube_parameters = $el.data('parameters') || '';
+    ratio = ratio.split(':');
 
+    // width and height might override default_ratio value
     if (typeof width === 'number' && typeof height === 'number') {
       $el.width(width);
       padding_bottom = height + 'px';
@@ -586,19 +587,21 @@ __webpack_require__.r(__webpack_exports__);
       $el.width(width);
       padding_bottom = width * ratio[1] / ratio[0] + 'px';
     } else {
-      width = $el.width(); // no width means that container is fluid and will be the size of its parent
+      width = $el.width();
 
+      // no width means that container is fluid and will be the size of its parent
       if (width == 0) {
         width = $el.parent().width();
       }
-
       padding_bottom = ratio[1] / ratio[0] * 100 + '%';
-    } //
+    }
+
+    //
     // This HTML will be placed inside 'lazyYT' container
 
+    innerHtml.push('<div class="ytp-thumbnail">');
 
-    innerHtml.push('<div class="ytp-thumbnail">'); // Play button from YouTube (exactly as it is in YouTube)
-
+    // Play button from YouTube (exactly as it is in YouTube)
     innerHtml.push('<div class="ytp-large-play-button"');
     if (width <= 640) innerHtml.push(' style="transform: scale(0.563888888888889);"');
     innerHtml.push('>');
@@ -609,8 +612,8 @@ __webpack_require__.r(__webpack_exports__);
     innerHtml.push('</div>'); // end of .ytp-large-play-button
 
     innerHtml.push('</div>'); // end of .ytp-thumbnail
-    // Video title (info bar)
 
+    // Video title (info bar)
     innerHtml.push('<div class="html5-info-bar">');
     innerHtml.push('<div class="html5-title">');
     innerHtml.push('<div class="html5-title-text-wrapper">');
@@ -618,15 +621,12 @@ __webpack_require__.r(__webpack_exports__);
     innerHtml.push(loading_text);
     innerHtml.push('</a>');
     innerHtml.push('</div>'); // .html5-title
-
     innerHtml.push('</div>'); // .html5-title-text-wrapper
-
     innerHtml.push('</div>'); // end of Video title .html5-info-bar
 
     $el.css({
       'padding-bottom': padding_bottom
     }).html(innerHtml.join(''));
-
     if (width > 640) {
       thumb_img = 'maxresdefault.jpg';
     } else if (width > 480) {
@@ -641,12 +641,10 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       thumb_img = 'default.jpg';
     }
-
     $thumb = $el.find('.ytp-thumbnail').css({
       'background-image': ['url(//img.youtube.com/vi/', id, '/', thumb_img, ')'].join('')
     }).addClass('lazyYT-image-loaded').on('click', function (e) {
       e.preventDefault();
-
       if (!$el.hasClass('lazyYT-video-loaded') && $thumb.hasClass('lazyYT-image-loaded')) {
         $el.html('<iframe src="//www.youtube.com/embed/' + id + '?autoplay=1&' + youtube_parameters + '" frameborder="0" allowfullscreen></iframe>').addClass('lazyYT-video-loaded');
       }
@@ -655,7 +653,6 @@ __webpack_require__.r(__webpack_exports__);
       $el.find('#lazyYT-title-' + id).text(data.entry.title.$t);
     });
   }
-
   $.fn.lazyYT = function (newSettings) {
     var defaultSettings = {
       loading_text: 'Loading...',
@@ -671,7 +668,6 @@ __webpack_require__.r(__webpack_exports__);
     });
   };
 })(jQuery);
-
 if (document.querySelectorAll('.rs-lazyYT').length > 0) {
   $('.rs-lazyYT').lazyYT({
     youtube_parameters: 'rel=0',
