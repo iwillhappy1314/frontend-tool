@@ -1,11 +1,6 @@
 /**************************\
   Basic Modal Styles
 \**************************/
-
-.modal {
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-}
-
 .modal__overlay {
     position: fixed;
     top: 0;
@@ -20,7 +15,8 @@
 
 .modal__container {
     background-color: #fff;
-    padding: 30px;
+    margin: 0 24px;
+    padding: 32px;
     max-width: 500px;
     max-height: 100vh;
     border-radius: 4px;
@@ -62,10 +58,7 @@
 
 .modal__btn {
     font-size: .875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding: .5rem 1rem;
     background-color: #e6e6e6;
     color: rgba(0, 0, 0, .8);
     border-radius: .25rem;
@@ -84,7 +77,6 @@
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     transition: -webkit-transform .25s ease-out;
-    transition: transform .25s ease-out;
     transition: transform .25s ease-out, -webkit-transform .25s ease-out;
 }
 
