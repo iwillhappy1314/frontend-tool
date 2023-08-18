@@ -27,6 +27,10 @@ if (dropdownEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
 }
 
+if ($('.rs-modal').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/micro-modal.js'], 'modal');
+}
+
 if (popoverEl.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/popover.js'], 'popover');
 }
