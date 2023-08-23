@@ -1,4 +1,6 @@
 'use strict';
+import Dropdown from 'bootstrap/js/dist/dropdown';
+import Popover from 'bootstrap/js/dist/popover';
 
 const dropdownElementList = document.querySelectorAll('.rs-dropdown-toggle');
 

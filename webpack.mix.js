@@ -43,8 +43,7 @@ mix.js('assets/scripts/main.js', 'dist/scripts').
     js('assets/scripts/customizer.js', 'dist/scripts').
     js('assets/scripts/woocommerce.js', 'dist/scripts');
 
-mix.js('assets/scripts/modules/bootstrap.js', 'static/js').
-    js('assets/scripts/modules/dropdown.js', 'static/js').
+mix.js('assets/scripts/modules/dropdown.js', 'static/js').
     js('assets/scripts/modules/popover.js', 'static/js').
     js('assets/scripts/modules/tooltip.js', 'static/js').
     js('assets/scripts/modules/lazy-youtube/lazy-youtube.js', 'static/js').
@@ -79,7 +78,7 @@ if (mix.inProduction()) {
 }
 
 mix.browserSync({
-    proxy         : 's.as',
+    proxy         : 'http://starter.test/',
     files         : [
         {
             match  : [
