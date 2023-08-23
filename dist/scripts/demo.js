@@ -4218,6 +4218,16 @@ module.exports = function (list, options) {
   };
 };
 
+/***/ }),
+
+/***/ "jquery":
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/***/ ((module) => {
+
+module.exports = jQuery;
+
 /***/ })
 
 /******/ 	});
@@ -4296,40 +4306,25 @@ module.exports = function (list, options) {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!******************************************!*\
-  !*** ./assets/scripts/modules/splide.js ***!
-  \******************************************/
+/*!********************************!*\
+  !*** ./assets/scripts/demo.js ***!
+  \********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _splidejs_splide_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide/css */ "./node_modules/.pnpm/@splidejs+splide@4.1.4/node_modules/@splidejs/splide/dist/css/splide.min.css");
-/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/.pnpm/@splidejs+splide@4.1.4/node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/.pnpm/@splidejs+splide@4.1.4/node_modules/@splidejs/splide/dist/js/splide.esm.js");
+/* harmony import */ var _splidejs_splide_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @splidejs/splide/css */ "./node_modules/.pnpm/@splidejs+splide@4.1.4/node_modules/@splidejs/splide/dist/css/splide.min.css");
+/* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 
 
-var splide = new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"]('#main-carousel', {
-  pagination: false
-});
-var thumbnails = document.getElementsByClassName('thumbnail');
-var current;
-for (var i = 0; i < thumbnails.length; i++) {
-  initThumbnail(thumbnails[i], i);
+if ($('#rs-news-slider').length > 0) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__["default"]('#rs-news-slider', {
+    type: 'loop',
+    autoplay: true,
+    arrows: false,
+    perPage: 1
+  }).mount();
 }
-function initThumbnail(thumbnail, index) {
-  thumbnail.addEventListener('click', function () {
-    splide.go(index);
-  });
-}
-splide.on('mounted move', function () {
-  var thumbnail = thumbnails[splide.index];
-  if (thumbnail) {
-    if (current) {
-      current.classList.remove('is-active');
-    }
-    thumbnail.classList.add('is-active');
-    current = thumbnail;
-  }
-});
-splide.mount();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=splide.js.map
+//# sourceMappingURL=demo.js.map

@@ -40,11 +40,12 @@ mix.sass('assets/styles/main.scss', 'dist/styles').
     });
 
 mix.js('assets/scripts/main.js', 'dist/scripts').
+    js('assets/scripts/demo.js', 'dist/scripts').
     js('assets/scripts/customizer.js', 'dist/scripts').
     js('assets/scripts/woocommerce.js', 'dist/scripts');
 
-mix.js('assets/scripts/modules/dropdown.js', 'static/js').
-    js('assets/scripts/modules/popover.js', 'static/js').
+mix.js('assets/scripts/modules/dropdown/dropdown.js', 'static/js').
+    js('assets/scripts/modules/popover/popover.js', 'static/js').
     js('assets/scripts/modules/tooltip.js', 'static/js').
     js('assets/scripts/modules/lazy-youtube/lazy-youtube.js', 'static/js').
     js('assets/scripts/modules/sticky-sidebar.js', 'static/js').
@@ -55,7 +56,7 @@ mix.js('assets/scripts/modules/dropdown.js', 'static/js').
     js('assets/scripts/modules/swiper/swiper.js', 'static/js').
     js('assets/scripts/modules/wow/wow.js', 'static/js').
     js('assets/scripts/modules/splide.js', 'static/js').
-    js('assets/scripts/modules/response-tabs.js', 'static/js').
+    js('assets/scripts/modules/response-tabs/response-tabs.js', 'static/js').
     js('assets/scripts/modules/smart-tab.js', 'static/js').
     js('assets/scripts/modules/back-to-top.js', 'static/js').
     js('assets/scripts/modules/off-canvas/off-canvas.js', 'static/js').

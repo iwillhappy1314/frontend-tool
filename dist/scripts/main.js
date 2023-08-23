@@ -34,8 +34,8 @@ function footerNav() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "isMobile": () => (/* binding */ isMobile),
-/* harmony export */   "isTableMobile": () => (/* binding */ isTableMobile)
+/* harmony export */   isMobile: () => (/* binding */ isMobile),
+/* harmony export */   isTableMobile: () => (/* binding */ isTableMobile)
 /* harmony export */ });
 function isMobile() {
   var check = false;
@@ -67,7 +67,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "jquery");
 function menuToggle() {
-  $('.rs-dropdown-toggle').click(function () {
+  $('.rs-dropdown-nav-toggle').click(function () {
     $('body').toggleClass('f-menu-toggled');
     $('.f-body-cover').toggleClass('hidden');
     $('#site-navigation').toggleClass('is-toggled');
@@ -181,6 +181,9 @@ var splideEL = document.querySelectorAll('.splide');
 if (dropdownEl.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/dropdown.js'], 'dropdown');
 }
+if ($('.rs-modal').length > 0) {
+  loadjs([wenpriseSettings.staticPath + 'js/micro-modal.js'], 'modal');
+}
 if (popoverEl.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/popover.js'], 'popover');
 }
@@ -217,9 +220,11 @@ if (swiperEL.length > 0) {
 if (scrollSpyEL.length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/scrollspy.js'], 'scrollspy');
 }
-if (splideEL.length > 0) {
-  loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
-}
+
+//if (splideEL.length > 0) {
+//    loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
+//}
+
 if ($('.rsp-tabs').length > 0) {
   loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'rsp-tabs');
 }
@@ -255,7 +260,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ smartMenu)
 /* harmony export */ });
 /* provided dependency */ var jQuery = __webpack_require__(/*! jquery */ "jquery");
-__webpack_require__(/*! smartmenus */ "./node_modules/.pnpm/smartmenus@1.1.1/node_modules/smartmenus/dist/jquery.smartmenus.js");
+__webpack_require__(/*! smartmenus */ "./node_modules/.pnpm/smartmenus@1.2.1_jquery@3.7.0/node_modules/smartmenus/dist/jquery.smartmenus.js");
 function smartMenu() {
   //@see https://www.smartmenus.org/docs/
   jQuery('.sm, .product-categories').smartmenus({
@@ -753,14 +758,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/smartmenus@1.1.1/node_modules/smartmenus/dist/jquery.smartmenus.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/.pnpm/smartmenus@1.1.1/node_modules/smartmenus/dist/jquery.smartmenus.js ***!
-  \***********************************************************************************************/
+/***/ "./node_modules/.pnpm/smartmenus@1.2.1_jquery@3.7.0/node_modules/smartmenus/dist/jquery.smartmenus.js":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/smartmenus@1.2.1_jquery@3.7.0/node_modules/smartmenus/dist/jquery.smartmenus.js ***!
+  \************************************************************************************************************/
 /***/ ((module, exports, __webpack_require__) => {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * SmartMenus jQuery Plugin - v1.1.1 - July 23, 2020
+ * SmartMenus jQuery Plugin - v1.2.1 - November 3, 2022
  * http://www.smartmenus.org/
  *
  * Copyright Vasil Dinkov, Vadikom Web Ltd.
@@ -1915,13 +1920,17 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 		return this.each(function() {
 			// [data-sm-options] attribute on the root UL
 			var dataOpts = $(this).data('sm-options') || null;
-			if (dataOpts && typeof dataOpts !== 'object') {
-				try {
-					dataOpts = eval('(' + dataOpts + ')');
-				} catch(e) {
-					dataOpts = null;
-					alert('ERROR\n\nSmartMenus jQuery init:\nInvalid "data-sm-options" attribute value syntax.');
-				};
+			if (dataOpts && typeof dataOpts != 'object') {
+				dataOpts = null;
+				alert('ERROR\n\nSmartMenus jQuery init:\nThe value of the "data-sm-options" attribute must be valid JSON.');
+			}
+			// do not support function options
+			if (dataOpts) {
+				$.each(['showFunction', 'hideFunction', 'collapsibleShowFunction', 'collapsibleHideFunction'], function() {
+					if (this in dataOpts) {
+						delete dataOpts[this];
+					}
+				});
 			}
 			new $.SmartMenus(this, $.extend({}, $.fn.smartmenus.defaults, options, dataOpts));
 		});
@@ -1977,6 +1986,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 	return $;
 }));
+
 
 /***/ }),
 

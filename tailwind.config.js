@@ -52,7 +52,7 @@ module.exports = {
     'justify-center',
     'text-primary',
     {
-      pattern: /bg-(red|green|blue)-(100|200|300)|rs-.+|flex-*|mr-2/,
+      pattern: /bg-(red|green|blue)-(100|200|300)|rs-.+|hs-.+|flex-*|mr-2/,
     },
   ]),
   theme      : {
@@ -122,7 +122,6 @@ module.exports = {
   },
   plugins    : [
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
   ],
 };

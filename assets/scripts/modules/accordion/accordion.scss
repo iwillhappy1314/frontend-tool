@@ -1,5 +1,4 @@
 .ac {
-  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -11,7 +10,7 @@
 .ac .ac-trigger {
   font-size: 16px;
   font-weight: 600;
-  color: #111;
+  color: var(--text-color);
   text-align: left;
   width: 100%;
   padding: 16px 30px 16px 0;
@@ -23,7 +22,7 @@
   text-decoration: none;
   margin: 0;
   border: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--light-gray-color);
   &:hover,
   &:focus,
   &:active{
@@ -42,7 +41,7 @@
 }
 
 .ac .ac-trigger:focus {
-  color: #8a8a8a
+  color: var(--primary-color)
 }
 
 .ac .ac-panel {
@@ -53,7 +52,7 @@
 
 .ac .ac-panel .ac-text {
   font: 15px/24px Arial, sans-serif;
-  color: #111;
+  color: var(--text-color);
   padding: 10px;
   margin: 0
 }

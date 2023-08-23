@@ -79,9 +79,9 @@ if (scrollSpyEL.length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/scrollspy.js'], 'scrollspy');
 }
 
-if (splideEL.length > 0) {
-    loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
-}
+//if (splideEL.length > 0) {
+//    loadjs([wenpriseSettings.staticPath + 'js/splide.js'], 'splide');
+//}
 
 if ($('.rsp-tabs').length > 0) {
     loadjs([wenpriseSettings.staticPath + 'js/response-tabs.js'], 'rsp-tabs');
