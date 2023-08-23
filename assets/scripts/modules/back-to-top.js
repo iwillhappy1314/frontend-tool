@@ -1,3 +1,5 @@
+import {isTableMobile} from '../components/is-mobile';
+
 jQuery(document).ready(function($) {
   function goToTop() {
     var $goToTopEl          = $('.rs-back-to-top'),
@@ -28,7 +30,7 @@ jQuery(document).ready(function($) {
       elementOffset = 250;
     }
 
-    if (elementMobile !== 'true') {
+    if (elementMobile !== 'true' && isTableMobile()) {
       return true;
     }
 
@@ -37,9 +39,6 @@ jQuery(document).ready(function($) {
     } else {
       $goToTopEl.fadeOut();
     }
-
-    console.log($(window).scrollTop());
-    console.log(Number(elementOffset));
   }
 
   goToTop();
