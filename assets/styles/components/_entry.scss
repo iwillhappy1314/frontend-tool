@@ -1,39 +1,13 @@
-.hentry{
-    @apply mb-8;
-}
-
 // 内容
 .rs-entry {
-    @screen lg{
-        @apply px-0;
-    }
-
-    &__image{
-        min-width: 200px;
-    }
-
     &__title{
-        @apply text-xl leading-normal mb-2;
         a{
             color: var(--text-color);
-        }
-
-        @screen lg{
-            @apply text-2xl;
         }
     }
 
     &__desc {
-        @apply text-base;
         color: var(--light-text-color);
-    }
-
-    &__footer{
-        @apply flex justify-between items-center mt-2;
-
-        @screen lg{
-          @apply mt-4;
-        }
     }
 
     &__meta {
@@ -90,10 +64,6 @@
 
     &__date{
         color: var(--lighter-text-color);
-    }
-
-    &__more {
-
     }
 
 }
