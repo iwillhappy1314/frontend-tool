@@ -30,6 +30,7 @@ mix.sass('assets/styles/main.scss', 'dist/styles').
     sass('assets/styles/products.scss', 'dist/styles').
     sass('assets/styles/review.scss', 'dist/styles').
     sass('assets/styles/woocommerce.scss', 'dist/styles').
+    sass('assets/styles/login.scss', 'dist/styles').
     sass('assets/styles/admin.scss', 'dist/styles').
     sass('assets/scripts/modules/swiper/swiper.scss', 'static/css').
     tailwind().
