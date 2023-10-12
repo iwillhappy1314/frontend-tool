@@ -100,7 +100,7 @@ table.my_account_orders {
         @apply w-full;
 
         ul {
-            @apply px-6 py-4 flex flex-wrap;
+            @apply px-6 py-4 flex flex-wrap m-0;
             background-color: $bg-color;
 
             li {
@@ -119,13 +119,19 @@ table.my_account_orders {
                     color: $text-color;
                 }
 
+                &:hover,
                 &.is-active {
                     @apply bg-transparent;
                     a {
                         @apply font-medium;
                         color: $primary;
                     }
+
+                    &:after{
+                        color: $primary;
+                    }
                 }
+
             }
         }
     }
@@ -247,7 +253,7 @@ div.woocommerce-MyAccount-navigation {
         border-bottom: 1px solid $border-color;
 
         h3 {
-            @apply flex-grow text-base;
+            @apply flex-grow text-base m-0;
         }
 
         .edit {

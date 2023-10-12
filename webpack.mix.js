@@ -72,7 +72,7 @@ mix.copyWatched('assets/images', 'dist/images').
     copyWatched('assets/fonts', 'dist/fonts');
 
 if (mix.inProduction()) {
-    //mix.versionHash();
+    mix.versionHash();
     mix.icons('assets/icons', 'assets/fonts', 'assets/styles/icons.scss');
 } else {
     mix.sourceMaps();

@@ -221,11 +221,16 @@
     }
 }
 
-.payment_methods {
+.showcoupon{
+    @apply underline;
+}
+
+ul.payment_methods {
     @include clearfix;
+    @apply list-none m-0;
 
     li {
-        @apply leading-loose text-left mb-2 font-normal;
+        @apply leading-loose text-left mb-2 font-normal list-none;
 
         input {
             @apply mr-2;

@@ -89,33 +89,33 @@
                 @apply block absolute leading-none;
                 width: 1em;
                 height: 1em;
-                font-family: "WooCommerce";
-                content: "";
+                font-family: "icomoon";
+                content: "\ea56";
                 text-indent: 0;
             }
 
             &:hover ~ a::before {
-                content: "";
+                content: "\ea56";
             }
         }
 
         &:hover a::before {
-            content: "";
+            content: "\ea54";
         }
 
         &.selected {
             a.active {
                 &::before {
-                    content: "";
+                    content: "\ea54";
                 }
 
                 ~ a::before {
-                    content: "";
+                    content: "\ea56";
                 }
             }
 
             a:not(.active)::before {
-                content: "";
+                content: "\ea54";
             }
         }
     }

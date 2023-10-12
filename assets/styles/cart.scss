@@ -69,9 +69,9 @@ table.cart {
     }
 }
 
-.woocommerce-shipping-methods,
-.woocommerce-shipping-destination{
-    @apply mb-2;
+ul.woocommerce-shipping-methods,
+ul.woocommerce-shipping-destination{
+    @apply mb-2 list-none;
 }
 
 .woocommerce-shipping-calculator {
@@ -90,7 +90,7 @@ table.cart {
 .shipping-calculator-button{
     @apply underline flex items-center justify-end whitespace-nowrap mb-1;
     &::after {
-        @include iconafter("");
+        @include iconafter("\e019");
     }
 }
 

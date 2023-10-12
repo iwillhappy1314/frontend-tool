@@ -6,10 +6,10 @@
     height: 1em;
     font-size: 1em;
     width: 5.4em;
-    font-family: "star";
+    font-family: "icomoon";
 
     &::before {
-        content: "sssss";
+        content: "\ea56\ea56\ea56\ea56\ea56";
         @apply float-left absolute text-gray-500;
     }
 
@@ -19,6 +19,6 @@
 
     span::before {
         @apply absolute left-0 top-0;
-        content: "SSSSS";
+        content: "\ea54\ea54\ea54\ea54\ea54";
     }
 }

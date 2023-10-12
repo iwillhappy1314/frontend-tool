@@ -98,6 +98,7 @@ $input-height: 40px;
 }
 
 .select2-results__option {
+    @apply leading-normal;
     padding: 6px;
     user-select: none;
     -webkit-user-select: none;
