@@ -52,7 +52,7 @@ module.exports = {
     'justify-center',
     'text-primary',
     {
-      pattern: /bg-(red|green|blue)-(100|200|300)|rs-.+|hs-.+|flex-*|mr-2/,
+      pattern: /bg-(red|green|blue)-(100|200|300)|rs-.+|mean-.+|hs-.+|flex-*|mr-2/,
     },
   ]),
   theme      : {

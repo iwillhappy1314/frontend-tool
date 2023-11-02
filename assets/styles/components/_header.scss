@@ -10,6 +10,7 @@ body {
   --notice-h: 0px; // 移动端通知条高度
   --admin-bar-h: 46px; // 管理工具条高度
   --logo-h: 48px; // 移动端Logo高度
+  --topbar-h: 36px; // 移动端Logo高度
 
   --header-sticky-h: 75px; // 固定移动端页头高度
   --sticky-logo-h: 48px; // 固定Logo高度
@@ -26,6 +27,26 @@ body {
     --admin-bar-h: 32px;       // PC端管理工具条高度
     --logo-h: 64px;                 // PC端Logo高度
   }
+}
+
+.site__topbar {
+  background: var(--global-palette9);
+  border-top: 0px none transparent;
+  border-bottom: 1px solid var(--global-palette8);
+  height: var(--topbar-h);
+  line-height: var(--topbar-h);
+
+  .kt-row-column-wrap {
+    max-width: var(--global-content-width, 1290px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wp-block-group__inner-container {
+    display: flex;
+    align-items: center;
+  }
+
 }
 
 .site__notice {
@@ -83,7 +104,7 @@ body {
   }
   .nav-menu {
     @apply hidden flex-wrap m-0 left-0 absolute;
-    top: var(--header-h);
+    top: calc(var(--header-h) + var(--topbar-h));
     z-index: 98;
 
     @screen lg {

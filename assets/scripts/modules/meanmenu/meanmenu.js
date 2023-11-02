@@ -296,8 +296,8 @@ import './meanmenu.scss';
 
 jQuery(document).ready(function($) {
     $('.rs-mean-menu').meanmenu({
-        meanMenuOpen     : '<span class="icon-bars2"></span>',
-        meanMenuClose    : '<span class="icon-x"></span>',
+        meanMenuOpen     : '<span class="icomoon icon-navigation"></span>',
+        meanMenuClose    : '<span class="icomoon icon-x"></span>',
         meanMenuContainer: '.f-mean-nav',
         meanScreenWidth  : '768',
         meanExpand       : '+',
