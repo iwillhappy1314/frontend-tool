@@ -84,6 +84,7 @@
     "/static/js/popover.js": "/static/js/popover.js",
     "/static/js/quantity.js": "/static/js/quantity.js",
     "/static/js/response-tabs.js": "/static/js/response-tabs.js",
+    "/static/js/scrollspy.js": "/static/js/scrollspy.js",
     "/static/js/service.js": "/static/js/service.js",
     "/static/js/shuffle.js": "/static/js/shuffle.js",
     "/static/js/skip-link-focus-fix.js": "/static/js/skip-link-focus-fix.js",

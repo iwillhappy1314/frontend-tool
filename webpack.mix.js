@@ -63,6 +63,7 @@ mix.js('assets/scripts/modules/dropdown/dropdown.js', 'static/js').
     js('assets/scripts/modules/off-canvas/off-canvas.js', 'static/js').
     js('assets/scripts/modules/micro-modal/micro-modal.js', 'static/js').
     js('assets/scripts/modules/infinite-scroll.js', 'static/js').
+    js('assets/scripts/modules/scrollspy.js', 'static/js').
     js('assets/scripts/modules/isotope.js', 'static/js').
     js('assets/scripts/modules/masonry.js', 'static/js').
     js('assets/scripts/modules/shuffle.js', 'static/js');
