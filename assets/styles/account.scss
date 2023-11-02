@@ -324,7 +324,7 @@ ul.order_details {
     li {
         margin-top: -1px;
         margin-left: -1px;
-        @apply border-t border-b border-gray-300 uppercase leading-none list-none text-sm py-3 w-full;
+        @apply border-t border-b border-gray-300 uppercase leading-none list-none text-sm py-3 w-full flex-grow;
 
         @screen sm {
             @apply w-1/2 py-4;
