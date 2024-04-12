@@ -1,9 +1,0 @@
-/*!
- * SmartMenus jQuery Plugin - v1.2.1 - November 3, 2022
- * http://www.smartmenus.org/
- *
- * Copyright Vasil Dinkov, Vadikom Web Ltd.
- * http://vadikom.com
- *
- * Licensed MIT
- */

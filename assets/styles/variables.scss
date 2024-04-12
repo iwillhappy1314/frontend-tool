@@ -1,0 +1,373 @@
+// ======================
+// 配色
+// ======================
+
+$icomoon-font-path: "../fonts";
+
+// 基本颜色
+$white-ter: hsl(0, 0%, 96%);
+$white-bis: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+$black: hsl(0, 0%, 4%);
+$black-bis: hsl(0, 0%, 7%);
+$black-ter: hsl(0, 0%, 14%);
+
+$grey-darker: hsl(0, 0%, 21%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 71%);
+$grey-lighter: hsl(0, 0%, 86%);
+
+$orange: hsl(14, 100%, 53%);
+$yellow: hsl(48, 100%, 67%);
+$green: hsl(141, 71%, 48%);
+$turquoise: hsl(171, 100%, 41%);
+$cyan: hsl(204, 86%, 53%);
+$blue: hsl(217, 71%, 53%);
+$purple: hsl(271, 100%, 71%);
+$red: hsl(348, 100%, 61%);
+
+$brand_color: #26a073;
+$secondary_color:  #00d1b2;
+$embellishment_color:  #ffdd57;
+$text_color:  #333332;
+$text_mute_color:  #777778;
+$link_color:  #333334;
+$link_hover_color:  #3273dd;
+$info_color:  #209cee;
+$success_color:  #23d160;
+$warning_color:  #ffdd56;
+$danger_color:  #ff3860;
+$navbar_height:  3.125rem;
+$woocommerce_primary:  #E83632;
+$woocommerce_secondary:  #f3f3f3;
+$woocommerce_highlight:  #3BE891;
+
+// 基本配色
+$primary: $brand_color;
+$secondary: $secondary_color;
+$light: $white-ter;
+$dark: $grey-darker;
+$info: $info_color;
+$success: $success_color;
+$warning: $warning_color;
+$danger: $danger_color;
+
+
+// 基本配色反色
+$orange-invert: findColorInvert($orange);
+$yellow-invert: findColorInvert($yellow);
+$green-invert: findColorInvert($green);
+$turquoise-invert: findColorInvert($turquoise);
+$cyan-invert: findColorInvert($cyan);
+$blue-invert: findColorInvert($blue);
+$purple-invert: findColorInvert($purple);
+$red-invert: findColorInvert($red);
+
+$primary-invert: findColorInvert($primary);
+$secondary-invert: findColorInvert($secondary);
+$info-invert: findColorInvert($info);
+$success-invert: findColorInvert($success);
+$warning-invert: findColorInvert($warning);
+$danger-invert: findColorInvert($danger);
+$light-invert: $dark;
+$dark-invert: $light;
+
+// 链接
+$link: $link_color;
+$link-invert: $link_hover_color;
+$link-visited: $purple;
+
+$link-hover: $grey-darker;
+$link-hover-border: $grey-light;
+
+$link-focus: $grey-darker;
+$link-focus-border: $grey-dark;
+
+$link-active: $grey-darker;
+$link-active-border: $grey-dark;
+
+// 背景
+$body-background-color: #fff;
+$highlight: #333;
+
+// 背景和边框
+$background: #f6f6f6;
+$border: #E2E8F0;
+$border-hover: $grey-light;
+$border-color: $border;
+$border-color-darker: #ccc;
+
+// 文字颜色
+$text-color: $text_color;
+$text-dark: #1A202C;
+$text-light: #718096;
+$text-lighter: #A0AEC0;
+$text-strong-color: #222;
+$text-mark-color: #2D3748;
+$text-mark-background-color: #ff0;
+$text-mute-color: $text_mute_color;
+
+$text: $text-color;
+$text-invert: findColorInvert($text);
+$text-strong: $text-strong-color;
+
+// ======================
+// 通用间距
+// ======================
+$spacer-xs: 4px;
+$spacer-sm: 8px;
+$spacer-md: 16px;
+$spacer-lg: 32px;
+$spacer-xl: 64px;
+
+// ======================
+// 宽度
+// ======================
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+$gap: $spacer-lg;
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+$widescreen: 1280px;
+
+// ======================
+// 分栏
+// ======================
+$variable-columns: true;
+$column-gap: $spacer-md;
+
+
+// ======================
+// 圆角
+// ======================
+$radius-small: 2px;
+$radius: 4px;
+$radius-large: 6px;
+$radius-rounded: 290486px;
+
+// ======================
+// 投影
+// ======================
+$shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+$shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+$shadow-outline: 0 0 0 3px rgba(52, 144, 220, 0.5);
+
+// ======================
+// 动画
+// ======================
+$easing: ease-out;
+$speed: 86ms;
+
+// ======================
+// 分区
+// ======================
+$section-padding: $spacer-md $spacer-md;
+$section-padding-medium: $spacer-md $spacer-sm;
+$section-padding-large: $spacer-sm $spacer-xs;
+
+// 黄金比例
+$bronze: 1.333;
+$sliver: 1.414;
+$golden: 1.618;
+$platinum: 1.732;
+
+// ======================
+// 字体
+// ======================
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: Monaco, Consolas, "Courier New", monospace;
+$family-serif: "Noto Serif", Optima, Georgia, "Times New Roman", Times, serif;
+$render-mode: optimizeLegibility;
+
+$family-primary: $family-sans-serif;
+$family-code: $family-monospace;
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+
+// ======================
+// 字号
+// ======================
+
+//文字字号
+$text-tiny-font-size: 10px;
+$text-small-font-size: 12px;
+$text-font-size: 14px;
+$text-large-font-size: 16px;
+
+// 标题字号
+$h1-font-size: 36px;
+$h2-font-size: 28px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
+
+
+// ======================
+// 元素尺寸
+// ======================
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.875rem;
+$size-8: 0.75rem;
+
+$size-xsmall: $size-8;
+$size-small: $size-7;
+$size-normal: $size-6;
+$size-medium: $size-5;
+$size-large: $size-4;
+
+$dimensions: 64 128;
+
+// ======================
+// 表单控件
+// ======================
+$control-radius: 0;
+$input-radius: 3px;
+
+// ======================
+// 导航条
+// ======================
+$navbar-item-color: #333;
+$navbar-height: $navbar_height;
+$navbar-background-color: none;
+
+// 鼠标经过颜色
+$navbar-item-hover-color: $primary;
+$navbar-item-active-color: $primary;
+
+// 主菜单当前、鼠标划过状态
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-background-color: transparent;
+
+// 整个下拉菜单背景
+$navbar-dropdown-background-color: #fff;
+$navbar-dropdown-item-hover-color: $primary;
+
+// 下拉菜单鼠标划过
+$navbar-dropdown-item-hover-background-color: #fff;
+$navbar-dropdown-item-hover-color: $primary;
+
+// 下拉菜单激活状态
+$navbar-dropdown-item-active-background-color: #fff;
+$navbar-dropdown-item-active-color: $primary;
+
+$navbar-dropdown-boxed-radius: 0;
+$navbar-dropdown-offset: 0;
+$navbar-item-img-max-height: intial;
+$navbar-dropdown-boxed-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+
+$menu-bar-spacing: 5 $navbar-dropdown-boxed-shadow;
+
+
+// ======================
+// 选项卡
+// ======================
+$tabs-border-bottom-color: $border-color;
+$tabs-border-bottom-style: solid;
+$tabs-border-bottom-width: 1px;
+$tabs-link-color: $text-color;
+$tabs-link-hover-border-bottom-color: $text-strong-color;
+$tabs-link-hover-color: $text-color;
+$tabs-link-active-border-bottom-color: $link;
+$tabs-link-active-color: $link;
+$tabs-link-padding: 0.5em 1em;
+
+$tabs-boxed-link-radius: $radius;
+$tabs-boxed-link-hover-background-color: $background;
+$tabs-boxed-link-hover-border-bottom-color: $border-color;
+
+$tabs-boxed-link-active-background-color: $white;
+$tabs-boxed-link-active-border-color: $border-color;
+$tabs-boxed-link-active-border-bottom-color: transparent;
+
+$tabs-toggle-link-border-color: $border-color;
+$tabs-toggle-link-border-style: solid;
+$tabs-toggle-link-border-width: 1px;
+$tabs-toggle-link-hover-background-color: $background;
+$tabs-toggle-link-hover-border-color: $border-color;
+$tabs-toggle-link-radius: $radius;
+$tabs-toggle-link-active-background-color: $background;
+$tabs-toggle-link-active-border-color: $border-color;
+$tabs-toggle-link-active-color: $text-color;
+
+// ======================
+//卡片
+// ======================
+$card-color: $text-color;
+$card-background-color: #fff;
+$card-shadow: none;
+
+$card-header-background-color: none;
+$card-header-color: $text-strong-color;
+$card-header-shadow: none;
+
+$card-content-background-color: none;
+
+$card-footer-background-color: none;
+$card-footer-border-top: 1px solid $border-color;
+
+// 输入框 Focus
+$input-focus-box-shadow-size: 0;
+$input-focus-box-shadow-color: transparent;
+
+$input-border-color: $border-color;
+$input-hover-border-color: $primary;
+$input-focus-border-color: $primary;
+
+// 按钮 Focus
+$button-focus-box-shadow-size: 0;
+
+// ======================
+// Carouse 颜色
+// ======================
+$carousel-nav-background: rgba(0, 0, 0, 0.7);
+$carousel-nav-color: #fff;
+$carousel-title-background: rgba(0, 0, 0, 0.7);
+$carousel-title-size: 18px;
+
+// ======================
+// 数字分页
+// ======================
+$pagination-border-color: #eee;
+$pagination-color: #333;
+
+$pagination-current-background-color: $primary;
+$pagination-current-border-color: $primary;
+$pagination-current-color: #fff;
+
+
+// ======================
+// 衍生变量、根据上面的变量生成
+// ======================
+// Code colors
+$code: $red !default;
+$code-background: $background !default;
+
+$pre: $text !default;
+$pre-background: $background !default;
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+// $colors: mergeColorMaps(("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "link": ($link, $link-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert)), $custom-colors) !default;
+//
+// $shades: mergeColorMaps(("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis), $custom-shades) !default;
+
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 !default;
