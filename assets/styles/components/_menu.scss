@@ -8,7 +8,7 @@
 // 移动端
 @screen -lg{
     :root {
-        --menu-bg-color: var(--light-text-color);
+        --menu-bg-color: var(--gray-700);
         --menu-text-color: var(--white);
         --menu-border-color: rgba(0,0,0,.15);
     }
@@ -18,7 +18,7 @@
 @screen lg{
     :root {
         --menu-bg-color: transparent;
-        --menu-text-color: var(--text-color);
+        --menu-text-color: var(--gray-800);
     }
 
     .sm-menu ul{
@@ -85,7 +85,7 @@ $sm-menu__collapsible-separators-color: var(--menu-border-color);
 
 // Items
 $sm-menu__desktop-item-highlighted-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.25);
-$sm-menu__desktop-item-disabled-color: var(--lighter-text-color);
+$sm-menu__desktop-item-disabled-color: var(--gray-600);
 $sm-menu__desktop-item-padding-vertical: 12px;
 $sm-menu__desktop-item-padding-horizontal: 12px;
 

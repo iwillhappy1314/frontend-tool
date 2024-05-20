@@ -90,7 +90,7 @@ ul.wpuf-column-fields{
     @apply absolute text-sm;
     right: 10px;
     top: 7px;
-    color: var(--lighter-text-color);
+    color: var(--gray-600);
 }
 
 .wpuf-error-msg{
@@ -143,11 +143,11 @@ ul.wpuf-column-fields{
     }
 
     .mce-edit-area {
-        border-right: 1px solid var(--lighter-gray-color) !important;
+        border-right: 1px solid var(--gray-200) !important;
     }
 
     .mce-top-part {
-        border-bottom: 1px solid var(--lighter-gray-color);
+        border-bottom: 1px solid var(--gray-200);
 
         &::before {
             content: none;
@@ -174,7 +174,7 @@ ul.wpuf-column-fields{
 
 .wpuf-help{
     @apply text-sm;
-    color: var(--lighter-text-color);
+    color: var(--gray-600);
 }
 
 .wpuf-submit-button,

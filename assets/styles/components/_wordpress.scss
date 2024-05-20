@@ -41,7 +41,7 @@ img.wp-post-image {
 .gallery-caption,
 .entry-caption {
     @apply leading-loose italic text-xs;
-    color: var(--light-gray-color);
+    color: var(--gray-300);
 }
 
 .search-form {
@@ -192,7 +192,7 @@ ul.blocks-gallery-grid {
 .wp-block-quote {
     @apply pl-4 py-2 mb-4 border-l-4;
     border-color: var(--primary-color);
-    background-color: var(--lighter-gray-color);
+    background-color: var(--gray-200);
 
     p {
         &:last-child {
@@ -203,15 +203,15 @@ ul.blocks-gallery-grid {
 
 .wp-block-code {
     @apply border p-4 rounded-sm;
-    border-color: var(--light-gray-color);
-    background-color: var(--lighter-gray-color);
+    border-color: var(--gray-300);
+    background-color: var(--gray-200);
 }
 
 .pagination {
     @apply flex;
     li {
         @apply block leading-none border mr-2 rounded overflow-hidden;
-        border-color: var(--light-gray-color);
+        border-color: var(--gray-300);
         &.active {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
@@ -222,7 +222,7 @@ ul.blocks-gallery-grid {
 
         a {
             @apply block px-3 py-2 rounded;
-            color: var(--light-text-color);
+            color: var(--gray-700);
         }
     }
 }
@@ -232,7 +232,7 @@ ul.blocks-gallery-grid {
     @apply m-0 w-full;
     font-size: 13px;
     line-height: 1.846153846;
-    color: var(--light-gray-color);
+    color: var(--gray-300);
 }
 
 #wp-calendar th,

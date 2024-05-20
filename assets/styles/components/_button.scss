@@ -13,19 +13,19 @@ button,
     @apply relative cursor-pointer leading-none text-gray-700 font-medium border rounded text-center align-middle;
     transition: all .15s ease-in-out;
     padding: calc(.75em - 1px) 1.5em;
-    background-color: var(--lighter-gray-color);
-    border-color: var(--gray-color);
-    color: var(--light-text-color);
+    background-color: var(--gray-200);
+    border-color: var(--gray-400);
+    color: var(--gray-700);
 
     &:hover {
-        background-color: var(--light-gray-color);
-        border-color: var(--gray-color);
+        background-color: var(--gray-300);
+        border-color: var(--gray-400);
     }
 
     &:focus,
     &:active{
         @apply outline-none;
-        background-color: var(--light-gray-color);
+        background-color: var(--gray-300);
     }
 
     &--primary{

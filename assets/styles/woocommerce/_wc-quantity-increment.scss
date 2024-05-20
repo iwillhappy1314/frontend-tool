@@ -1,9 +1,9 @@
-$border-color: var(--gray-color);
+$border-color: var(--gray-400);
 
 body.woocommerce-page .quantity .minus,
 body.woocommerce-page .quantity .plus {
     @apply bg-white h-full;
-    border-color: var(--gray-color);
+    border-color: var(--gray-400);
 
     &:focus{
         @apply outline-none;
@@ -47,7 +47,7 @@ ul.products li.product .price ins {
 .quantity-nav {
     @apply bg-white grid grid-rows-2 items-center;
     width: 35px;
-    border: 1px solid var(--gray-color);
+    border: 1px solid var(--gray-400);
 }
 
 .quantity-button {
@@ -64,7 +64,7 @@ ul.products li.product .price ins {
     }
 
     &.quantity-up {
-        border-bottom: 1px solid var(--gray-color);
+        border-bottom: 1px solid var(--gray-400);
     }
 
     &.quantity-down:before,
