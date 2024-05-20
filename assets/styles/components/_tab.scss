@@ -2,7 +2,7 @@ ul.rs-tab__nav {
     li {
         a {
             @apply block no-underline;
-            color: var(--text-color);
+            color: var(--gray-800);
         }
     }
 }
@@ -127,7 +127,7 @@ $breakpoint-phone: 640px;
             left: 45%;
             width: 2rem;
             height: 2rem;
-            border: 10px solid var(--lightest-gray-color);
+            border: 10px solid var(--gray-100);
             border-top: 10px solid var(--primary-color);
             border-radius: 50%;
             z-index: 10;

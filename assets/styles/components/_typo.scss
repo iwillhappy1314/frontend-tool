@@ -70,7 +70,7 @@
     table td,
     table caption {
         @apply border-b border-gray-300 py-2 text-left;
-        color: var(--text-color);
+        color: var(--gray-800);
     }
 
     table th,
@@ -84,7 +84,7 @@
 
     em, legend, caption {
         font-weight: inherit;
-        color: var(--text-color);
+        color: var(--gray-800);
     }
 
     /* Responsive images */

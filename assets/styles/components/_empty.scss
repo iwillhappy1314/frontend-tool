@@ -1,6 +1,6 @@
 .rs-empty {
     @apply mx-auto text-center px-8 py-16;
-    color: var(--light-text-color);
+    color: var(--gray-700);
 
     @screen md {
         max-width: 750px;

@@ -2,12 +2,12 @@
 .rs-entry {
     &__title{
         a{
-            color: var(--text-color);
+            color: var(--gray-800);
         }
     }
 
     &__desc {
-        color: var(--light-text-color);
+        color: var(--gray-700);
     }
 
     &__meta {
@@ -21,14 +21,14 @@
         & > span {
             @apply mr-2;
             font-family: sans-serif, Arial;
-            color: var(--lighter-text-color);
+            color: var(--gray-600);
 
             &:last-child {
                 @apply mr-0;
             }
 
             a {
-                color: var(--lighter-text-color);
+                color: var(--gray-600);
             }
         }
     }
@@ -63,7 +63,7 @@
     }
 
     &__date{
-        color: var(--lighter-text-color);
+        color: var(--gray-600);
     }
 
 }
@@ -72,8 +72,8 @@
     li{
         a{
             @apply inline-block leading-none px-2 py-1 text-sm rounded-sm;
-            color: var(--lighter-text-color);
-            background-color: var(--lighter-gray-color);
+            color: var(--gray-600);
+            background-color: var(--gray-200);
         }
     }
 }

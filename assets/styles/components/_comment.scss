@@ -10,7 +10,7 @@
 
     .avatar {
         @apply rounded-full border;
-        border-color: var(--light-gray-color);
+        border-color: var(--gray-300);
     }
 
     ol.comment-list {
@@ -66,14 +66,14 @@
 
     input[type="submit"]{
         @include button-base();
-        @include button-bg(var(--lighter-gray-color), var(--light-gray-color), var(--gray-color));
-        @include button-border(var(--light-gray-color), var(--gray-color), var(--gray-color));
-        color: var(--light-text-color);
+        @include button-bg(var(--gray-200), var(--gray-300), var(--gray-400));
+        @include button-border(var(--gray-300), var(--gray-400), var(--gray-400));
+        color: var(--gray-700);
     }
 
     &-cookies-consent {
         @apply flex w-full items-center text-sm text-gray-600;
-        color: var(--lighter-text-color);
+        color: var(--gray-600);
     }
 
     @screen lg {
@@ -115,8 +115,8 @@
 
     .comment-body {
         @apply relative border border-gray-300 bg-gray-100;
-        background-color: var(--lightest-gray-color);
-        border-color: var(--lighter-gray-color);
+        background-color: var(--gray-100);
+        border-color: var(--gray-200);
         padding: 25px 25px 25px 98px;
         margin: 2em 0 0;
     }
@@ -134,7 +134,7 @@
 
         b {
             @apply font-normal;
-            color: var(--lighter-text-color);
+            color: var(--gray-600);
         }
     }
 
@@ -144,13 +144,13 @@
 
         a {
             @apply text-xs;
-            color: var(--lighter-text-color);
+            color: var(--gray-600);
         }
     }
 
     &-reply-link {
         @apply inline-block mt-2;
-        color: var(--lighter-text-color);
+        color: var(--gray-600);
     }
 
     &-reply-title {
@@ -158,12 +158,12 @@
     }
 
     &-notes {
-        color: var(--lighter-text-color);
+        color: var(--gray-600);
     }
 
     &-content {
         @apply mt-3;
-        color: var(--text-color);
+        color: var(--gray-800);
     }
 
     &-navigation {
