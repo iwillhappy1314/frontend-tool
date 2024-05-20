@@ -2,9 +2,6 @@ import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 import {CountUp} from 'countup.js';
 
-import Toastify from 'toastify-js';
-import 'toastify-js/src/toastify.css';
-
 if ($('#rs-news-slider').length > 0) {
     new Splide('#rs-news-slider', {
         type    : 'loop',
@@ -34,9 +31,3 @@ window.onload = function() {
         enableScrollSpy: true
     }).start();
 };
-
-
-Toastify({
-    text: "This is a toast",
-    duration: 3000
-}).showToast();

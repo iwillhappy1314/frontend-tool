@@ -59,7 +59,6 @@
     "swiper": "^8.4.7",
     "theia-sticky-sidebar": "^1.7.0",
     "tippy.js": "^6.3.7",
-    "toastify-js": "^1.12.0",
     "uniq": "^1.0.1",
     "wow.js": "^1.2.2"
   }

@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./assets/scripts/editor.js":
@@ -8,6 +7,7 @@
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_swiper_commen__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper/commen */ "./assets/scripts/modules/swiper/commen.js");
 /* harmony import */ var _modules_swiper_section__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/swiper/section */ "./assets/scripts/modules/swiper/section.js");
@@ -47,6 +47,7 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ WenpriseCommonCarouselClass)
@@ -181,6 +182,7 @@ var WenpriseCommonCarouselClass = /*#__PURE__*/function (_elementorModules$fro) 
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ WenpriseISectionCarouselClass)
@@ -288,11 +290,9 @@ var WenpriseISectionCarouselClass = /*#__PURE__*/function (_elementorModules$fro
 /*!***********************************!*\
   !*** ./assets/styles/styles.scss ***!
   \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/.pnpm/mini-css-extract-plugin@1.6.2_webpack@5.88.2/node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/.pnpm/sass-loader@12.6.0_sass@1.66.1_webpack@5.88.2/node_modules/sass-loader/dist/cjs.js):\nSassError: It's not clear which file to import. Found:\n  assets/styles/components/_tab.scss\n  assets/styles/components/tab.scss\n   ╷\n20 │ @import \"components/tab\";\n   │         ^^^^^^^^^^^^^^^^\n   ╵\n  assets/styles/styles.scss 20:9  root stylesheet\n    at processResult (/Volumes/Storage/Sites/starter/wp-content/themes/_s/frontend/node_modules/.pnpm/webpack@5.88.2_webpack-cli@4.10.0/node_modules/webpack/lib/NormalModule.js:764:19)\n    at /Volumes/Storage/Sites/starter/wp-content/themes/_s/frontend/node_modules/.pnpm/webpack@5.88.2_webpack-cli@4.10.0/node_modules/webpack/lib/NormalModule.js:866:5\n    at /Volumes/Storage/Sites/starter/wp-content/themes/_s/frontend/node_modules/.pnpm/loader-runner@4.3.0/node_modules/loader-runner/lib/LoaderRunner.js:400:11\n    at /Volumes/Storage/Sites/starter/wp-content/themes/_s/frontend/node_modules/.pnpm/loader-runner@4.3.0/node_modules/loader-runner/lib/LoaderRunner.js:252:18\n    at context.callback (/Volumes/Storage/Sites/starter/wp-content/themes/_s/frontend/node_modules/.pnpm/loader-runner@4.3.0/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at Object.loader (/Volumes/Storage/Sites/starter/wp-content/themes/_s/frontend/node_modules/.pnpm/sass-loader@12.6.0_sass@1.66.1_webpack@5.88.2/node_modules/sass-loader/dist/index.js:69:5)");
 
 /***/ }),
 
@@ -302,6 +302,7 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -407,8 +408,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/dist/scripts/editor": 0,
-/******/ 			"dist/styles/editor": 0,
-/******/ 			"dist/styles/styles": 0
+/******/ 			"dist/styles/editor": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -458,9 +458,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["dist/styles/editor","dist/styles/styles"], () => (__webpack_require__("./assets/scripts/editor.js")))
-/******/ 	__webpack_require__.O(undefined, ["dist/styles/editor","dist/styles/styles"], () => (__webpack_require__("./assets/styles/styles.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dist/styles/editor","dist/styles/styles"], () => (__webpack_require__("./assets/styles/editor.scss")))
+/******/ 	__webpack_require__.O(undefined, ["dist/styles/editor"], () => (__webpack_require__("./assets/scripts/editor.js")))
+/******/ 	__webpack_require__.O(undefined, ["dist/styles/editor"], () => (__webpack_require__("./assets/styles/styles.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["dist/styles/editor"], () => (__webpack_require__("./assets/styles/editor.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
