@@ -140,14 +140,14 @@ ul.woocommerce-shipping-destination{
         }
 
         td.actions {
-            @screen tablet{
+            @screen -md{
                 @apply border-b-0;
             }
             .coupon {
                 @apply flex;
 
                 .input-text {
-                    @apply leading-normal outline-none text-sm border border-secondary;
+                    @apply leading-normal outline-none text-sm border border-alt;
                     margin: 0 -1px 0 0;
 
                     @screen lg{

@@ -39,7 +39,7 @@ $primary-text: #262224;
 }
 
 // 移动端
-@screen laptop{
+@screen -lg{
   :root {
     --header-bg-color: var(--white);
     --global-content-edge-padding: 24px;

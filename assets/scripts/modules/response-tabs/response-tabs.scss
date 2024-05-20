@@ -160,7 +160,7 @@ h2.resp-accordion:first-child {
 }
 
 /*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
-@screen laptop{
+@screen -lg{
   ul.resp-tabs-list {
     display: none;
   }

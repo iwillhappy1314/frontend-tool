@@ -6,7 +6,7 @@
 }
 
 // 移动端
-@screen laptop{
+@screen -lg{
     :root {
         --menu-bg-color: var(--light-text-color);
         --menu-text-color: var(--white);
@@ -151,7 +151,7 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
 
         // Toggle buttons (sub menu indicators)
         .sub-arrow {
-            @screen laptop{
+            @screen -lg{
                 position: absolute;
                 top: 50%;
                 margin-top: -(ceil($sm-menu__toggle-size / 2));
@@ -169,7 +169,7 @@ $sm-menu__toggle-spacing: floor($sm-menu__item-height * 0.1);
             content: '\e9a7';
         }
 
-        @screen laptop{
+        @screen -lg{
             &.highlighted .sub-arrow::before {
                 content: '\e9a4';
             }

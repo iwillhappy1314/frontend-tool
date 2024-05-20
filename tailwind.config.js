@@ -72,19 +72,19 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
 
-      'widescreen': {'max': '1535px'},
+      '-2xl': {'max': '1535px'},
       // => @media (max-width: 1535px) { ... }
 
-      'desktop': {'max': '1279px'},
+      '-xl': {'max': '1279px'},
       // => @media (max-width: 1279px) { ... }
 
-      'laptop': {'max': '1023px'},
+      '-lg': {'max': '1023px'},
       // => @media (max-width: 1023px) { ... }
 
-      'tablet': {'max': '767px'},
+      '-md': {'max': '767px'},
       // => @media (max-width: 767px) { ... }
 
-      'phone': {'max': '639px'},
+      '-sm': {'max': '639px'},
       // => @media (max-width: 639px) { ... }
     },
     container: {
@@ -98,9 +98,9 @@ module.exports = {
     },
     extend   : {
       colors: {
-        primary  : '#e50011',
-        secondary: '#9e7b07',
-        gray     : {
+        primary: 'var(--primary-color)',
+        alt    : 'var(--alt-color)',
+        gray   : {
           '100': '#f5f5f5',
           '200': '#eee',
           '300': '#e0e0e0',

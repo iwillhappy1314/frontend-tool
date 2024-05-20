@@ -6,7 +6,7 @@
 /**
  * Style begins
  */
-@screen laptop{
+@screen -lg{
   .woocommerce {
 
     table.shop_table_responsive {
@@ -179,7 +179,7 @@
 }
 
 
-@screen tablet{
+@screen -md{
   .woocommerce table.cart {
     td.actions {
       @apply text-left;
