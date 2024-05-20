@@ -1,0 +1,40 @@
+.c-video {
+
+  &__image {
+    text-align: center;
+  }
+
+  &__play-icon {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    margin-top: -36px;
+    margin-left: -36px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .wpion-play{
+    color: #fff;
+  }
+
+  &__summary {
+  }
+
+  &__desc {
+  }
+
+  &__video {
+  }
+
+  &__frame {
+  }
+
+}

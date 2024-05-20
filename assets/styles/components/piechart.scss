@@ -1,0 +1,72 @@
+.c-piecharts{
+  clear: both;
+}
+
+.c-piechart{
+
+  position: relative;
+  text-align: center;
+  float: left;
+  overflow: hidden;
+  padding: 10px;
+  min-height: 200px;
+
+  canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    margin: 0 auto 15px;
+  }
+
+  &__percentage{
+    span {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: #333;
+      font-weight: bolder;
+
+      .wprs-dark-bg & {
+        color: #e5e5e5;
+      }
+    }
+
+    sup {
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+
+  &__label{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 55%;
+    max-width: 65%;
+    color: #888;
+
+    .wprs-dark-bg & {
+      color: #909090;
+    }
+  }
+
+  &.dark-bg {
+    .wprs-label {
+      color: #fff;
+    }
+
+    .wprs-percentage span {
+      color: #eee;
+    }
+  }
+}

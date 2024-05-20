@@ -1,0 +1,128 @@
+.wprs-portfolio-wrap {
+  clear: both;
+  overflow: hidden;
+
+  .c-portfolio__header {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    clear: both;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    &.wprs-no-heading {
+      justify-content: center;
+    }
+
+    @include mobile {
+      flex-flow: column wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .c-portfolio {
+    &__item {
+      .hentry {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+
+      .wprs-project-image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 100%;
+          transition: all 0.4s ease-in-out 0s;
+        }
+
+        &:hover {
+          img {
+            filter: brightness(50%);
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
+
+.c-portfolio__filter {
+  display: block;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+
+  @include mobile {
+    align-self: last-baseline;
+  }
+
+  .&-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-style: normal;
+    border-bottom: 1px solid #ddd;
+
+    .wprs-dark-bg & {
+      border-color: #444;
+    }
+
+    a {
+      font-size: 15px;
+      line-height: 24px;
+      transition: all 0.4s ease-in-out 0s;
+      display: block;
+      color: #777;
+      padding: 0 15px 15px;
+
+      .wprs-dark-bg & {
+        color: #999;
+      }
+
+      &:hover {
+        color: #222;
+
+        .wprs-dark-bg & {
+          color: #fff;
+        }
+      }
+
+      @include mobile {
+        padding: 0 10px 8px;
+      }
+    }
+
+    &.wprs-active {
+      a {
+        color: #222;
+
+        .wprs-dark-bg & {
+          color: #fff;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom: 3px solid #f94213;
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

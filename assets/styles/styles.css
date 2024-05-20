@@ -1,0 +1,61 @@
+/*
+Error: ("white": (white, #0a0a0a), "black": (#0a0a0a, white), "light": (whitesmoke, #363636), "dark": (#363636, whitesmoke), "primary": (#26a073, findColorInvert(#26a073)), "link": (#333334, #3273dd), "info": (#209cee, findColorInvert(#209cee)), "success": (#23d160, findColorInvert(#23d160)), "warning": (#ffdd56, findColorInvert(#ffdd56)), "danger": (#ff3860, findColorInvert(#ff3860))) isn't a valid CSS value.
+        on line 369 of variables.scss
+        from line 3 of styles.scss
+
+Backtrace:
+variables.scss:369
+styles.scss:3
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/script/value/map.rb:52:in `to_s'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:175:in `join'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:175:in `to_value'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:168:in `to_literal'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:159:in `_perform'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `map'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:88:in `block in with_import'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:88:in `with_import'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+/Users/Amoslee/.ruby/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+/Users/amoslee/.ruby/bin/sass:23:in `load'
+/Users/amoslee/.ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: (\"white\": (white, #0a0a0a), \"black\": (#0a0a0a, white), \"light\": (whitesmoke, #363636), \"dark\": (#363636, whitesmoke), \"primary\": (#26a073, findColorInvert(#26a073)), \"link\": (#333334, #3273dd), \"info\": (#209cee, findColorInvert(#209cee)), \"success\": (#23d160, findColorInvert(#23d160)), \"warning\": (#ffdd56, findColorInvert(#ffdd56)), \"danger\": (#ff3860, findColorInvert(#ff3860))) isn't a valid CSS value.\A         on line 369 of variables.scss\A         from line 3 of styles.scss"; }

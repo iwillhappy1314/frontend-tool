@@ -1,0 +1,38 @@
+.counter {
+  font-size: 42px;
+  font-weight: 600;
+
+  + h5 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+
+  &--lined + h5:before {
+    display: block;
+    position: relative;
+    margin: 20px auto 25px;
+    width: 15%;
+    border-top: 2px solid #444;
+    opacity: 0.9;
+  }
+
+  &--small {
+    font-size: 28px;
+  }
+
+  &--large {
+    font-size: 56px;
+  }
+
+  &--xlarge {
+    font-size: 64px;
+    font-weight: 400;
+  }
+
+  &--inherit {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
