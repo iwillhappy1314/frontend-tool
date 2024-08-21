@@ -194,7 +194,7 @@ ul.blocks-gallery-grid {
 .pagination {
     @apply flex;
     li {
-        @apply block leading-none border border-gray-300 mr-2 rounded overflow-hidden;
+        @apply block flex-shrink-0 leading-none border border-gray-300 mr-2 rounded overflow-hidden;
         &.active {
             @apply bg-primary border-primary;
             a {
@@ -202,7 +202,8 @@ ul.blocks-gallery-grid {
             }
         }
 
-        a,span {
+        &>span,
+        a {
             @apply block px-3 py-2 rounded text-gray-700;
         }
 
