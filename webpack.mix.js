@@ -1,6 +1,8 @@
 let mix = require('laravel-mix');
 let webpack = require('webpack');
 
+const SVGSpritemapPlugin = require( 'svg-spritemap-webpack-plugin' );
+
 require('laravel-mix-tailwind');
 require('laravel-mix-versionhash');
 require('laravel-mix-copy-watched');
@@ -17,7 +19,22 @@ mix.webpackConfig({
             $              : 'jquery',
             jQuery         : 'jquery',
             'window.jQuery': 'jquery',
-        })],
+        }),
+        new SVGSpritemapPlugin(
+            'assets/icons/*.svg',
+            {
+                output: {
+                    filename: 'dist/images/icons.svg',
+                },
+                sprite: {
+                    prefix: 'rsicon-',
+                    generate: {
+                        title: false
+                    },
+                },
+            }
+        ),
+    ],
 });
 
 mix.sass('assets/styles/main.scss', 'dist/styles').
